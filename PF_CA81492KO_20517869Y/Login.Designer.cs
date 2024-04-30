@@ -43,6 +43,7 @@
             this.pFDataSetDiccionario = new PF_CA81492KO_20517869Y.PFDataSetDiccionario();
             this.adminsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminsTableAdapter = new PF_CA81492KO_20517869Y.PFDataSetDiccionarioTableAdapters.AdminsTableAdapter();
+            this.btnShowPassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pFDataSetDiccionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminsBindingSource)).BeginInit();
@@ -51,7 +52,7 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(315, 124);
+            this.lblUser.Location = new System.Drawing.Point(317, 124);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(70, 16);
             this.lblUser.TabIndex = 0;
@@ -60,7 +61,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(315, 176);
+            this.lblPassword.Location = new System.Drawing.Point(320, 176);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(67, 16);
             this.lblPassword.TabIndex = 1;
@@ -70,7 +71,7 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(314, 7);
+            this.lblLogin.Location = new System.Drawing.Point(318, 9);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(73, 25);
             this.lblLogin.TabIndex = 2;
@@ -81,7 +82,7 @@
             this.TxtBoxUser.Location = new System.Drawing.Point(302, 142);
             this.TxtBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxUser.Name = "TxtBoxUser";
-            this.TxtBoxUser.Size = new System.Drawing.Size(98, 22);
+            this.TxtBoxUser.Size = new System.Drawing.Size(109, 22);
             this.TxtBoxUser.TabIndex = 3;
             // 
             // TxtBoxPassword
@@ -89,16 +90,16 @@
             this.TxtBoxPassword.Location = new System.Drawing.Point(302, 194);
             this.TxtBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxPassword.Name = "TxtBoxPassword";
-            this.TxtBoxPassword.Size = new System.Drawing.Size(98, 22);
+            this.TxtBoxPassword.Size = new System.Drawing.Size(109, 22);
             this.TxtBoxPassword.TabIndex = 4;
             this.TxtBoxPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(302, 248);
+            this.btnLogin.Location = new System.Drawing.Point(302, 258);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(98, 29);
+            this.btnLogin.Size = new System.Drawing.Size(109, 29);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -106,10 +107,10 @@
             // 
             // bntRegisterClient
             // 
-            this.bntRegisterClient.Location = new System.Drawing.Point(302, 292);
+            this.bntRegisterClient.Location = new System.Drawing.Point(302, 291);
             this.bntRegisterClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntRegisterClient.Name = "bntRegisterClient";
-            this.bntRegisterClient.Size = new System.Drawing.Size(98, 29);
+            this.bntRegisterClient.Size = new System.Drawing.Size(109, 29);
             this.bntRegisterClient.TabIndex = 6;
             this.bntRegisterClient.Text = "New Client";
             this.bntRegisterClient.UseVisualStyleBackColor = true;
@@ -120,7 +121,7 @@
             this.bntExit.Location = new System.Drawing.Point(302, 355);
             this.bntExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntExit.Name = "bntExit";
-            this.bntExit.Size = new System.Drawing.Size(98, 29);
+            this.bntExit.Size = new System.Drawing.Size(109, 29);
             this.bntExit.TabIndex = 7;
             this.bntExit.Text = "Exit";
             this.bntExit.UseVisualStyleBackColor = true;
@@ -143,10 +144,10 @@
             this.CbUserType.Items.AddRange(new object[] {
             "Admin",
             "Client"});
-            this.CbUserType.Location = new System.Drawing.Point(302, 90);
+            this.CbUserType.Location = new System.Drawing.Point(302, 81);
             this.CbUserType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbUserType.Name = "CbUserType";
-            this.CbUserType.Size = new System.Drawing.Size(98, 24);
+            this.CbUserType.Size = new System.Drawing.Size(109, 24);
             this.CbUserType.TabIndex = 9;
             this.CbUserType.SelectedIndexChanged += new System.EventHandler(this.CbUserType_SelectedIndexChanged);
             // 
@@ -173,11 +174,23 @@
             // 
             this.adminsTableAdapter.ClearBeforeFill = true;
             // 
+            // btnShowPassword
+            // 
+            this.btnShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowPassword.Location = new System.Drawing.Point(302, 230);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(109, 23);
+            this.btnShowPassword.TabIndex = 11;
+            this.btnShowPassword.Text = "Show Password";
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 394);
+            this.Controls.Add(this.btnShowPassword);
             this.Controls.Add(this.lblUserType);
             this.Controls.Add(this.CbUserType);
             this.Controls.Add(this.pictureBox1);
@@ -217,5 +230,6 @@
         private System.Windows.Forms.BindingSource adminsBindingSource;
         private PFDataSetDiccionarioTableAdapters.AdminsTableAdapter adminsTableAdapter;
         public System.Windows.Forms.ComboBox CbUserType;
+        private System.Windows.Forms.Button btnShowPassword;
     }
 }

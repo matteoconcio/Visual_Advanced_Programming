@@ -113,17 +113,25 @@ namespace PF_CA81492KO_20517869Y
             }
         }
 
-        // limpia TxtBoxUser y TxtBoxPassword al cambiar de Admin a Client y viceversa
+        //limpia TxtBoxUser y TxtBoxPassword al cambiar de Admin a Client y viceversa
         private void CbUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
             TxtBoxUser.Clear();
             TxtBoxPassword.Clear();
         }
 
+        //abre el form RegisterClient
         private void bntRegisterClient_Click(object sender, EventArgs e)
         {
             RegisterClient registerClient = new RegisterClient();
             registerClient.ShowDialog();
+        }
+
+        //muestra password en TxtBoxPassword
+        private void btnShowPassword_Click(object sender, EventArgs e)
+        {
+            bool showPassword = !TxtBoxPassword.UseSystemPasswordChar;
+            TxtBoxPassword.UseSystemPasswordChar = showPassword;
         }
     }
 
