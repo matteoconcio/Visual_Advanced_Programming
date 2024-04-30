@@ -20,7 +20,7 @@ namespace PF_CA81492KO_20517869Y
            PopulateAdminCombox();
             GBManagement.Enabled = false;
         }
-        SqlConnection sqlConnection = new SqlConnection("server=MATTXPS\\SQLEXPRESS;database=master; Integrated Security=SSPI");
+        SqlConnection sqlConnection = new SqlConnection("server=MATTASUS\\SQLEXPRESS;database=master; Integrated Security=SSPI");
 
         private void PopulateAdminCombox()
         {

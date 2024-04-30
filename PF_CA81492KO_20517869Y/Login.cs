@@ -29,7 +29,7 @@ namespace PF_CA81492KO_20517869Y
             static ConexionBD()
             {
                 // Inicializa la cadena de conexión aquí
-                string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security=SSPI";
+                string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Integrated Security=SSPI";
                 Conexion = new SqlConnection(connectionString);
             }
         }

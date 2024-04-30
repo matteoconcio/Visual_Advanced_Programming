@@ -128,7 +128,7 @@ namespace PF_CA81492KO_20517869Y
 
             // Verificar si el producto ya está en lvCarrito
             bool encontrado = false;
-            foreach (ListViewItem item in lvcarrito.Items)
+            foreach (ListViewItem item in lvcarrito.Items) 
             {
                 if (item.SubItems[0].Text == id)
                 {
