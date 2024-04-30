@@ -57,35 +57,39 @@
             // labeltotal
             // 
             this.labeltotal.AutoSize = true;
-            this.labeltotal.Location = new System.Drawing.Point(791, 56);
+            this.labeltotal.Location = new System.Drawing.Point(1055, 69);
+            this.labeltotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labeltotal.Name = "labeltotal";
-            this.labeltotal.Size = new System.Drawing.Size(34, 13);
+            this.labeltotal.Size = new System.Drawing.Size(38, 16);
             this.labeltotal.TabIndex = 22;
             this.labeltotal.Text = "0.00€";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(751, 56);
+            this.label3.Location = new System.Drawing.Point(1001, 69);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 21;
             this.label3.Text = "Total:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(479, 56);
+            this.label2.Location = new System.Drawing.Point(639, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.Size = new System.Drawing.Size(131, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Carrito de la compra:";
             // 
             // btncarrito
             // 
-            this.btncarrito.Location = new System.Drawing.Point(358, 23);
+            this.btncarrito.Location = new System.Drawing.Point(477, 28);
+            this.btncarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncarrito.Name = "btncarrito";
-            this.btncarrito.Size = new System.Drawing.Size(87, 44);
+            this.btncarrito.Size = new System.Drawing.Size(116, 54);
             this.btncarrito.TabIndex = 19;
             this.btncarrito.Text = "Añadir al carrito";
             this.btncarrito.UseVisualStyleBackColor = true;
@@ -105,25 +109,28 @@
             "Pedal",
             "Plato",
             "Sillin"});
-            this.cbTipo.Location = new System.Drawing.Point(26, 46);
+            this.cbTipo.Location = new System.Drawing.Point(35, 57);
+            this.cbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(121, 21);
+            this.cbTipo.Size = new System.Drawing.Size(160, 24);
             this.cbTipo.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 19);
+            this.label1.Location = new System.Drawing.Point(31, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.Size = new System.Drawing.Size(113, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "Pieza de bicicleta";
             // 
             // btnfinalizar
             // 
-            this.btnfinalizar.Location = new System.Drawing.Point(754, 341);
+            this.btnfinalizar.Location = new System.Drawing.Point(1005, 420);
+            this.btnfinalizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnfinalizar.Name = "btnfinalizar";
-            this.btnfinalizar.Size = new System.Drawing.Size(87, 44);
+            this.btnfinalizar.Size = new System.Drawing.Size(116, 54);
             this.btnfinalizar.TabIndex = 16;
             this.btnfinalizar.Text = "Finalizar";
             this.btnfinalizar.UseVisualStyleBackColor = true;
@@ -131,9 +138,10 @@
             // 
             // btnborrarcarrito
             // 
-            this.btnborrarcarrito.Location = new System.Drawing.Point(622, 341);
+            this.btnborrarcarrito.Location = new System.Drawing.Point(829, 420);
+            this.btnborrarcarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnborrarcarrito.Name = "btnborrarcarrito";
-            this.btnborrarcarrito.Size = new System.Drawing.Size(87, 44);
+            this.btnborrarcarrito.Size = new System.Drawing.Size(116, 54);
             this.btnborrarcarrito.TabIndex = 15;
             this.btnborrarcarrito.Text = "Borrar carrito";
             this.btnborrarcarrito.UseVisualStyleBackColor = true;
@@ -141,9 +149,10 @@
             // 
             // btnborrararticulo
             // 
-            this.btnborrararticulo.Location = new System.Drawing.Point(482, 341);
+            this.btnborrararticulo.Location = new System.Drawing.Point(643, 420);
+            this.btnborrararticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnborrararticulo.Name = "btnborrararticulo";
-            this.btnborrararticulo.Size = new System.Drawing.Size(87, 44);
+            this.btnborrararticulo.Size = new System.Drawing.Size(116, 54);
             this.btnborrararticulo.TabIndex = 14;
             this.btnborrararticulo.Text = "Borrar artículo";
             this.btnborrararticulo.UseVisualStyleBackColor = true;
@@ -158,9 +167,10 @@
             this.columnHeader4,
             this.columnHeader5});
             this.lvcarrito.HideSelection = false;
-            this.lvcarrito.Location = new System.Drawing.Point(482, 80);
+            this.lvcarrito.Location = new System.Drawing.Point(643, 98);
+            this.lvcarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvcarrito.Name = "lvcarrito";
-            this.lvcarrito.Size = new System.Drawing.Size(359, 230);
+            this.lvcarrito.Size = new System.Drawing.Size(477, 282);
             this.lvcarrito.TabIndex = 13;
             this.lvcarrito.UseCompatibleStateImageBehavior = false;
             this.lvcarrito.View = System.Windows.Forms.View.Details;
@@ -199,9 +209,10 @@
             this.Cantidad,
             this.Precio});
             this.lvtienda.HideSelection = false;
-            this.lvtienda.Location = new System.Drawing.Point(26, 80);
+            this.lvtienda.Location = new System.Drawing.Point(35, 98);
+            this.lvtienda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvtienda.Name = "lvtienda";
-            this.lvtienda.Size = new System.Drawing.Size(419, 305);
+            this.lvtienda.Size = new System.Drawing.Size(557, 374);
             this.lvtienda.SmallImageList = this.imageList1;
             this.lvtienda.TabIndex = 12;
             this.lvtienda.UseCompatibleStateImageBehavior = false;
@@ -269,11 +280,11 @@
             // 
             // ClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PF_CA81492KO_20517869Y.Properties.Resources.background_main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(862, 411);
+            this.ClientSize = new System.Drawing.Size(1149, 506);
             this.Controls.Add(this.labeltotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -285,7 +296,7 @@
             this.Controls.Add(this.btnborrararticulo);
             this.Controls.Add(this.lvcarrito);
             this.Controls.Add(this.lvtienda);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BikeShop.es";

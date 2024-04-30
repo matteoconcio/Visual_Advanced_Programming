@@ -44,7 +44,8 @@
             this.TxtBoxNewPassword = new System.Windows.Forms.TextBox();
             this.TxtBoxNombreAdmin = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnShowPassword = new System.Windows.Forms.Button();
+            this.btnSaveAdmin = new System.Windows.Forms.Button();
             this.GBManagement.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +110,8 @@
             // 
             // GBManagement
             // 
+            this.GBManagement.Controls.Add(this.btnSaveAdmin);
+            this.GBManagement.Controls.Add(this.btnShowPassword);
             this.GBManagement.Controls.Add(this.label2);
             this.GBManagement.Controls.Add(this.TxtBoxRepeatNewPass);
             this.GBManagement.Controls.Add(this.label1);
@@ -142,6 +145,7 @@
             this.TxtBoxRepeatNewPass.Name = "TxtBoxRepeatNewPass";
             this.TxtBoxRepeatNewPass.Size = new System.Drawing.Size(133, 22);
             this.TxtBoxRepeatNewPass.TabIndex = 6;
+            this.TxtBoxRepeatNewPass.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -159,6 +163,7 @@
             this.TxtBoxOldPassword.Name = "TxtBoxOldPassword";
             this.TxtBoxOldPassword.Size = new System.Drawing.Size(133, 22);
             this.TxtBoxOldPassword.TabIndex = 4;
+            this.TxtBoxOldPassword.UseSystemPasswordChar = true;
             // 
             // lblModifyPasswordAdmin
             // 
@@ -185,6 +190,7 @@
             this.TxtBoxNewPassword.Name = "TxtBoxNewPassword";
             this.TxtBoxNewPassword.Size = new System.Drawing.Size(133, 22);
             this.TxtBoxNewPassword.TabIndex = 1;
+            this.TxtBoxNewPassword.UseSystemPasswordChar = true;
             // 
             // TxtBoxNombreAdmin
             // 
@@ -196,7 +202,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(729, 566);
+            this.btnExit.Location = new System.Drawing.Point(730, 554);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(150, 34);
@@ -205,15 +211,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnSave
+            // btnShowPassword
             // 
-            this.btnSave.Location = new System.Drawing.Point(729, 504);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(150, 34);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnShowPassword.Location = new System.Drawing.Point(15, 249);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(134, 23);
+            this.btnShowPassword.TabIndex = 8;
+            this.btnShowPassword.Text = "Show Password";
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveAdmin
+            // 
+            this.btnSaveAdmin.Location = new System.Drawing.Point(16, 293);
+            this.btnSaveAdmin.Name = "btnSaveAdmin";
+            this.btnSaveAdmin.Size = new System.Drawing.Size(133, 23);
+            this.btnSaveAdmin.TabIndex = 9;
+            this.btnSaveAdmin.Text = "Save";
+            this.btnSaveAdmin.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 
@@ -222,7 +236,6 @@
             this.BackgroundImage = global::PF_CA81492KO_20517869Y.Properties.Resources.background_main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(920, 626);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.GBManagement);
             this.Controls.Add(this.btnManagePart);
@@ -251,7 +264,6 @@
         private System.Windows.Forms.Button btnManagePart;
         private System.Windows.Forms.GroupBox GBManagement;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblModifyPasswordAdmin;
         private System.Windows.Forms.Label lblModifyNameAdmin;
         private System.Windows.Forms.TextBox TxtBoxNewPassword;
@@ -260,6 +272,8 @@
         private System.Windows.Forms.TextBox TxtBoxRepeatNewPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtBoxOldPassword;
+        private System.Windows.Forms.Button btnShowPassword;
+        private System.Windows.Forms.Button btnSaveAdmin;
     }
 }
 

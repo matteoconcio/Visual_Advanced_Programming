@@ -22,14 +22,15 @@ namespace PF_CA81492KO_20517869Y
             InitializeComponent();
         }
 
-        public static class ConexionBD
+        public class ConexionBD
         {
             public static SqlConnection Conexion { get; private set; }
 
             static ConexionBD()
             {
-                // Inicializa la cadena de conexión aquí
+                // Initialize the connection string
                 string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Integrated Security=SSPI";
+                // Create and initialize the SqlConnection object
                 Conexion = new SqlConnection(connectionString);
             }
         }
