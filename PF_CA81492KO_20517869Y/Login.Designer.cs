@@ -95,7 +95,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(302, 241);
+            this.btnLogin.Location = new System.Drawing.Point(302, 248);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(98, 29);
@@ -106,7 +106,7 @@
             // 
             // bntRegisterClient
             // 
-            this.bntRegisterClient.Location = new System.Drawing.Point(302, 274);
+            this.bntRegisterClient.Location = new System.Drawing.Point(302, 292);
             this.bntRegisterClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntRegisterClient.Name = "bntRegisterClient";
             this.bntRegisterClient.Size = new System.Drawing.Size(98, 29);

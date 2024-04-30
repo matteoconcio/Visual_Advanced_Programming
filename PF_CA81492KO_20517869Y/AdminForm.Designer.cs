@@ -35,6 +35,8 @@
             this.btnManageAdmin = new System.Windows.Forms.Button();
             this.btnManagePart = new System.Windows.Forms.Button();
             this.GBManagement = new System.Windows.Forms.GroupBox();
+            this.btnSaveAdmin = new System.Windows.Forms.Button();
+            this.btnShowPassword = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxRepeatNewPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.TxtBoxNewPassword = new System.Windows.Forms.TextBox();
             this.TxtBoxNombreAdmin = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnShowPassword = new System.Windows.Forms.Button();
-            this.btnSaveAdmin = new System.Windows.Forms.Button();
             this.GBManagement.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,7 +127,27 @@
             this.GBManagement.Size = new System.Drawing.Size(192, 377);
             this.GBManagement.TabIndex = 10;
             this.GBManagement.TabStop = false;
-            this.GBManagement.Text = "MODIFY HERE";
+            this.GBManagement.Text = "MODIFY ADMIN";
+            // 
+            // btnSaveAdmin
+            // 
+            this.btnSaveAdmin.Location = new System.Drawing.Point(16, 293);
+            this.btnSaveAdmin.Name = "btnSaveAdmin";
+            this.btnSaveAdmin.Size = new System.Drawing.Size(133, 23);
+            this.btnSaveAdmin.TabIndex = 9;
+            this.btnSaveAdmin.Text = "Save";
+            this.btnSaveAdmin.UseVisualStyleBackColor = true;
+            this.btnSaveAdmin.Click += new System.EventHandler(this.btnSaveAdmin_Click);
+            // 
+            // btnShowPassword
+            // 
+            this.btnShowPassword.Location = new System.Drawing.Point(15, 249);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(134, 23);
+            this.btnShowPassword.TabIndex = 8;
+            this.btnShowPassword.Text = "Show Password";
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
             // label2
             // 
@@ -210,24 +230,6 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnShowPassword
-            // 
-            this.btnShowPassword.Location = new System.Drawing.Point(15, 249);
-            this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(134, 23);
-            this.btnShowPassword.TabIndex = 8;
-            this.btnShowPassword.Text = "Show Password";
-            this.btnShowPassword.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveAdmin
-            // 
-            this.btnSaveAdmin.Location = new System.Drawing.Point(16, 293);
-            this.btnSaveAdmin.Name = "btnSaveAdmin";
-            this.btnSaveAdmin.Size = new System.Drawing.Size(133, 23);
-            this.btnSaveAdmin.TabIndex = 9;
-            this.btnSaveAdmin.Text = "Save";
-            this.btnSaveAdmin.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 
