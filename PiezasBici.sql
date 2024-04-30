@@ -1,0 +1,40 @@
+﻿CREATE TABLE piezas (
+    tipo VARCHAR(50),
+    id INT,
+    nombre VARCHAR(100),
+    unidades INT,
+    precio DECIMAL(10, 2)
+);
+
+INSERT INTO piezas (tipo, id, nombre, unidades, precio)
+VALUES 
+('Cuadro', 00, 'Cuadro Elops Speed', 5, 124.99),
+('Cuadro', 01, 'Cuadro Triban BTWIN', 5, 199.49),
+('Cuadro', 02, 'Cuadro BMX Silencer', 5, 149.99),
+('Cadena', 10, 'Cadena KMC 104 pasos', 10, 24.99),
+('Cadena', 11, 'Cadena KMC 112 pasos', 10, 29.99),
+('Cadena', 12, 'Cadena KMC 116 pasos', 10, 35.49),
+('Cierre', 20, 'Cierre rapido', 20, 3.49),
+('Cierre', 21, 'Cierre diagonal', 18, 3.99),
+('Cierre', 22, 'Cierre diagonal', 13, 5.50),
+('Disco', 30, 'Disco Galfer 140x1.8MM', 5, 19.99),
+('Disco', 31, 'Disco Galfer 160x1.8MM', 5, 29.49),
+('Disco', 32, 'Disco Galfer 180x1.8MM', 5, 39.99),
+('Manillar', 40, 'Manillar de ciudad', 7, 11.99),
+('Manillar', 41, 'Manillar recto', 10, 14.49),
+('Manillar', 42, 'Manillar de carrera', 9, 29.99),
+('Neumaticos', 50, 'Cubierta Michelin Country', 23, 24.99),
+('Neumaticos', 51, 'Cubierta Pirelli', 19, 34.99),
+('Neumaticos', 52, 'Cubierta Vittoria Corsa', 24, 49.49),
+('Rueda', 60, 'Rueda Bonin', 11, 99.99),
+('Rueda', 61, 'Rueda Swiss', 10, 149.50),
+('Rueda', 62, 'Rueda Shimano', 8, 199.99),
+('Pedal', 70, 'Pedales BMX', 20, 9.99),
+('Pedal', 71, 'Pedales BTT', 18, 12.49),
+('Pedal', 72, 'Pedales Carretera', 21, 14.99),
+('Plato', 80, 'Plato 6 velocidades', 5, 10.99),
+('Plato', 81, 'Plato 7 velocidades', 5, 12.99),
+('Plato', 82, 'Plato 8 velocidades', 5, 14.49),
+('Sillin', 90, 'Sillin DPV Apolo', 7, 49.50),
+('Sillin', 91, 'Sillin Titan Nack', 9, 29.99),
+('Sillin', 92, 'Sillin Selle SMP', 3, 14.99);

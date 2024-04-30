@@ -1,0 +1,129 @@
+﻿using Microsoft.Identity.Client;
+using Microsoft.SqlServer.Server;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PF_CA81492KO_20517869Y
+{
+    public partial class Login : Form
+    {
+        public Login()
+        {
+            InitializeComponent();
+        }
+
+        public static class ConexionBD
+        {
+            public static SqlConnection Conexion { get; private set; }
+
+            static ConexionBD()
+            {
+                // Inicializa la cadena de conexión aquí
+                string connectionString = "server=(local)\\SQLEXPRESS;database=master; Integrated Security=SSPI";
+                Conexion = new SqlConnection(connectionString);
+            }
+        }
+
+        //btnExit works properly
+        private void bntExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("EXIT FROM APPLICATION?", "EXIT", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        public string UserType
+        {
+            get { return UserType; }
+            set { UserType = CbUserType.SelectedItem as string; }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = TxtBoxUser.Text.Trim();
+            string password = TxtBoxPassword.Text;
+            string userType = CbUserType.SelectedItem as string;
+
+            if (string.IsNullOrEmpty(userType))
+            {
+                MessageBox.Show("Please, select a User Type");
+                return;
+            }
+
+            string tableName = (userType == "Client") ? "Clients" : "Admins";
+            string queryDB = $"SELECT Password FROM {tableName} WHERE Username = @Username";
+
+            using (SqlConnection connection = ConexionBD.Conexion)
+            using (SqlCommand sqlCommand = new SqlCommand(queryDB, connection))
+            {
+                sqlCommand.Parameters.AddWithValue("@Username", username);
+
+                try
+                {
+                    connection.Open();
+                    object result = sqlCommand.ExecuteScalar();
+
+                    // el usuario existe en la base de datos
+                    if (result != null)
+                    {
+                        string passwordDB = result.ToString();
+
+                        // compara las contraseñas
+                        if (password == passwordDB)
+                        {
+                            Console.WriteLine("Login Successful");
+                            // abre AdminForm o ClientForm
+                            if (userType == "Client")
+                            {
+                                ClientForm clientForm = new ClientForm();
+                                clientForm.ShowDialog();
+                            }
+                            else if (userType == "Admin")
+                            {
+                                AdminForm adminForm = new AdminForm();
+                                adminForm.ShowDialog();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid Username or Password");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error " + ex.Message);
+                }
+            }
+        }
+
+        // limpia TxtBoxUser y TxtBoxPassword al cambiar de Admin a Client y viceversa
+        private void CbUserType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxtBoxUser.Clear();
+            TxtBoxPassword.Clear();
+        }
+
+        private void bntRegisterClient_Click(object sender, EventArgs e)
+        {
+            RegisterClient registerClient = new RegisterClient();
+            registerClient.ShowDialog();
+        }
+    }
+
+}
