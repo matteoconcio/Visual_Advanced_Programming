@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using static PF_CA81492KO_20517869Y.Login;
 
 namespace PF_CA81492KO_20517869Y
 {
@@ -213,6 +215,76 @@ namespace PF_CA81492KO_20517869Y
 
         }
 
+        private void CBManagePart_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarDatosTienda();
+        }
+
+        private void CargarDatosTienda()
+        {
+            // Limpiar los elementos anteriores del ListView
+            lvtienda.Items.Clear();
+
+            // Obtener el tipo seleccionado
+            string tipo = CBManagePart.SelectedItem.ToString();
+
+
+            // Realizar la consulta SQL para obtener los datos del tipo seleccionado
+            string query = $"SELECT ID, Nombre, Unidades, Precio FROM {tipo}";
+
+            // Establecer la conexión a la base de datos
+            using (SqlConnection connection = new SqlConnection(ConexionBD.Conexion.ConnectionString))
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Ejecutar la consulta y leer los datos
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        // Obtener los datos del producto
+                        string id = reader["ID"].ToString();
+                        string nombre = reader["Nombre"].ToString();
+                        string unidades = reader["Unidades"].ToString();
+                        string precio = reader["Precio"].ToString() + "€";
+
+                        // Cargar la imagen desde el archivo JPG en la carpeta imagenes
+                        string imagePath = $"imagenes/{id}.jpg"; // Ruta de la imagen
+                        string imageName = File.Exists(imagePath) ? id + ".jpg" : ""; // Nombre de la imagen o cadena vacía si no existe
+
+                        // Agregar la imagen al ImageList si existe
+                        if (File.Exists(imagePath))
+                        {
+                            imageList1.Images.Add(id, Image.FromFile(imagePath));
+                        }
+
+                        // Crear una nueva fila para el ListView
+                        ListViewItem item = new ListViewItem();
+                        item.ImageKey = id; // Establecer el índice de imagen
+
+                        item.SubItems.Add(id);
+                        item.SubItems.Add(nombre);
+                        item.SubItems.Add(unidades);
+                        item.SubItems.Add(precio);
+
+                        // Agregar la fila al ListView
+                        lvtienda.Items.Add(item);
+                    }
+                    reader.Close();
+
+                    // Después de agregar los elementos al ListView
+                    lvtienda.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al recuperar datos: " + ex.Message);
+                }
+            }
+        }
+
         private void TxtBoxRepeatNewPass_TextChanged(object sender, EventArgs e)
         {
 
@@ -242,5 +314,7 @@ namespace PF_CA81492KO_20517869Y
         {
 
         }
+
+        
     }
 }

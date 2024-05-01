@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.CBManageAdmin = new System.Windows.Forms.ComboBox();
             this.lblManageAdmin = new System.Windows.Forms.Label();
             this.CBManagePart = new System.Windows.Forms.ComboBox();
@@ -54,6 +56,7 @@
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.GBManagement.SuspendLayout();
             this.GBModifyPart.SuspendLayout();
             this.SuspendLayout();
@@ -80,11 +83,23 @@
             // CBManagePart
             // 
             this.CBManagePart.FormattingEnabled = true;
+            this.CBManagePart.Items.AddRange(new object[] {
+            "Cuadro",
+            "Cadena",
+            "Cierre",
+            "Disco",
+            "Manillar",
+            "Neumaticos",
+            "Rueda",
+            "Pedal",
+            "Plato",
+            "Sillin"});
             this.CBManagePart.Location = new System.Drawing.Point(291, 50);
             this.CBManagePart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CBManagePart.Name = "CBManagePart";
             this.CBManagePart.Size = new System.Drawing.Size(151, 24);
             this.CBManagePart.TabIndex = 7;
+            this.CBManagePart.SelectedIndexChanged += new System.EventHandler(this.CBManagePart_SelectedIndexChanged);
             // 
             // lblManagePart
             // 
@@ -320,6 +335,41 @@
             this.Precio.Text = "Precio";
             this.Precio.Width = 57;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "0.JPG");
+            this.imageList1.Images.SetKeyName(1, "1.JPG");
+            this.imageList1.Images.SetKeyName(2, "2.JPG");
+            this.imageList1.Images.SetKeyName(3, "10.JPG");
+            this.imageList1.Images.SetKeyName(4, "11.JPG");
+            this.imageList1.Images.SetKeyName(5, "12.JPG");
+            this.imageList1.Images.SetKeyName(6, "20.JPG");
+            this.imageList1.Images.SetKeyName(7, "21.JPG");
+            this.imageList1.Images.SetKeyName(8, "22.JPG");
+            this.imageList1.Images.SetKeyName(9, "30.JPG");
+            this.imageList1.Images.SetKeyName(10, "31.JPG");
+            this.imageList1.Images.SetKeyName(11, "32.JPG");
+            this.imageList1.Images.SetKeyName(12, "40.JPG");
+            this.imageList1.Images.SetKeyName(13, "41.JPG");
+            this.imageList1.Images.SetKeyName(14, "42.JPG");
+            this.imageList1.Images.SetKeyName(15, "50.JPG");
+            this.imageList1.Images.SetKeyName(16, "51.JPG");
+            this.imageList1.Images.SetKeyName(17, "52.JPG");
+            this.imageList1.Images.SetKeyName(18, "60.JPG");
+            this.imageList1.Images.SetKeyName(19, "61.JPG");
+            this.imageList1.Images.SetKeyName(20, "62.JPG");
+            this.imageList1.Images.SetKeyName(21, "70.JPG");
+            this.imageList1.Images.SetKeyName(22, "71.JPG");
+            this.imageList1.Images.SetKeyName(23, "72.JPG");
+            this.imageList1.Images.SetKeyName(24, "80.JPG");
+            this.imageList1.Images.SetKeyName(25, "81.JPG");
+            this.imageList1.Images.SetKeyName(26, "82.JPG");
+            this.imageList1.Images.SetKeyName(27, "90.JPG");
+            this.imageList1.Images.SetKeyName(28, "91.JPG");
+            this.imageList1.Images.SetKeyName(29, "92.JPG");
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -370,12 +420,13 @@
         private System.Windows.Forms.Button btnSaveAdmin;
         private System.Windows.Forms.GroupBox GBModifyPart;
         private System.Windows.Forms.Label lblPart;
-        private System.Windows.Forms.ListView lvtienda;
         private System.Windows.Forms.ColumnHeader Imagen;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader Cantidad;
         private System.Windows.Forms.ColumnHeader Precio;
+        private System.Windows.Forms.ImageList imageList1;
+        public System.Windows.Forms.ListView lvtienda;
     }
 }
 
