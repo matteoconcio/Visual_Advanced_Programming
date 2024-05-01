@@ -313,68 +313,24 @@ namespace PF_CA81492KO_20517869Y
 
         }
 
-        //no funciona
-        private void lvtienda_AfterLabelEdit(object sender, LabelEditEventArgs e)
+        private void lvtienda_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (e.Label != null)
+            if (lvtienda.SelectedItems.Count > 0)
             {
-                ListViewItem editedItem = lvtienda.Items[e.Item];
+                // Get the selected item
+                ListViewItem selectedItem = lvtienda.SelectedItems[0];
 
-                // Get the ID of the product from the second subitem (assuming it contains the ID)
-                string id = editedItem.SubItems[1].Text;
-
-                string columnName;
-                double newValue;
-
-                // Determine which column is being edited based on the provided label
-                if (e.Item == 3) // Quantity column (assuming Quantity is at index 3)
-                {
-                    columnName = "Unidades";
-                }
-                else if (e.Item == 4) // Price column (assuming Price is at index 4)
-                {
-                    columnName = "Precio";
-                }
-                else
-                {
-                    MessageBox.Show("Invalid column index.");
-                    return;
-                }
-
-                // Parse the edited value
-                if (!double.TryParse(e.Label, out newValue))
-                {
-                    MessageBox.Show("Please enter a valid numeric value.");
-                    return;
-                }
-
-                // Update the corresponding record in the database
-                string query = $"UPDATE {CBManagePart.SelectedItem.ToString()} SET [{columnName}] = @NewValue WHERE ID = @ID";
-
-                using (SqlConnection connection = new SqlConnection(ConexionBD.Conexion.ConnectionString))
-                using (SqlCommand cmd = new SqlCommand(query, connection))
-                {
-                    cmd.Parameters.AddWithValue("@NewValue", newValue);
-                    cmd.Parameters.AddWithValue("@ID", id);
-
-                    try
-                    {
-                        connection.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Value updated successfully.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed to update value.");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error updating value: " + ex.Message);
-                    }
-                }
+                // Populate the textboxes with the corresponding values
+                TxtBoxManagePart.Text = selectedItem.SubItems[2].Text; // Assuming the name is in the third column (index 2)
+                TxtBoxQuantity.Text = selectedItem.SubItems[3].Text; // Assuming the quantity is in the fourth column (index 3)
+                TxtBoxPrice.Text = selectedItem.SubItems[4].Text; // Assuming the price is in the fifth column (index 4)
+            }
+            else
+            {
+                // Clear the textboxes if no item is selected
+                TxtBoxManagePart.Clear();
+                TxtBoxQuantity.Clear();
+                TxtBoxPrice.Clear();
             }
         }
     }

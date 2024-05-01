@@ -49,6 +49,13 @@
             this.TxtBoxNombreAdmin = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.GBModifyPart = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtBoxPrice = new System.Windows.Forms.TextBox();
+            this.TxtBoxQuantity = new System.Windows.Forms.TextBox();
+            this.TxtBoxManagePart = new System.Windows.Forms.TextBox();
+            this.bntSavePart = new System.Windows.Forms.Button();
             this.lvtienda = new System.Windows.Forms.ListView();
             this.Imagen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,13 +64,6 @@
             this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblPart = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.bntSavePart = new System.Windows.Forms.Button();
-            this.TxtBoxManagePart = new System.Windows.Forms.TextBox();
-            this.TxtBoxQuantity = new System.Windows.Forms.TextBox();
-            this.TxtBoxPrice = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.GBManagement.SuspendLayout();
             this.GBModifyPart.SuspendLayout();
             this.SuspendLayout();
@@ -298,6 +298,64 @@
             this.GBModifyPart.TabStop = false;
             this.GBModifyPart.Text = "MODIFICAR PARTE";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(79, 329);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Precio";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(79, 277);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 16);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Cantidad";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(79, 233);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Nombre";
+            // 
+            // TxtBoxPrice
+            // 
+            this.TxtBoxPrice.Location = new System.Drawing.Point(82, 348);
+            this.TxtBoxPrice.Name = "TxtBoxPrice";
+            this.TxtBoxPrice.Size = new System.Drawing.Size(53, 22);
+            this.TxtBoxPrice.TabIndex = 17;
+            // 
+            // TxtBoxQuantity
+            // 
+            this.TxtBoxQuantity.Location = new System.Drawing.Point(82, 296);
+            this.TxtBoxQuantity.Name = "TxtBoxQuantity";
+            this.TxtBoxQuantity.Size = new System.Drawing.Size(53, 22);
+            this.TxtBoxQuantity.TabIndex = 16;
+            // 
+            // TxtBoxManagePart
+            // 
+            this.TxtBoxManagePart.Location = new System.Drawing.Point(82, 252);
+            this.TxtBoxManagePart.Name = "TxtBoxManagePart";
+            this.TxtBoxManagePart.ReadOnly = true;
+            this.TxtBoxManagePart.Size = new System.Drawing.Size(173, 22);
+            this.TxtBoxManagePart.TabIndex = 15;
+            // 
+            // bntSavePart
+            // 
+            this.bntSavePart.Location = new System.Drawing.Point(393, 333);
+            this.bntSavePart.Name = "bntSavePart";
+            this.bntSavePart.Size = new System.Drawing.Size(92, 37);
+            this.bntSavePart.TabIndex = 14;
+            this.bntSavePart.Text = "Guardar";
+            this.bntSavePart.UseVisualStyleBackColor = true;
+            // 
             // lvtienda
             // 
             this.lvtienda.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -314,7 +372,7 @@
             this.lvtienda.TabIndex = 13;
             this.lvtienda.UseCompatibleStateImageBehavior = false;
             this.lvtienda.View = System.Windows.Forms.View.Details;
-            this.lvtienda.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.lvtienda_AfterLabelEdit);
+            this.lvtienda.SelectedIndexChanged += new System.EventHandler(this.lvtienda_SelectedIndexChanged);
             // 
             // Imagen
             // 
@@ -383,63 +441,6 @@
             this.imageList1.Images.SetKeyName(27, "90.JPG");
             this.imageList1.Images.SetKeyName(28, "91.JPG");
             this.imageList1.Images.SetKeyName(29, "92.JPG");
-            // 
-            // bntSavePart
-            // 
-            this.bntSavePart.Location = new System.Drawing.Point(393, 333);
-            this.bntSavePart.Name = "bntSavePart";
-            this.bntSavePart.Size = new System.Drawing.Size(92, 37);
-            this.bntSavePart.TabIndex = 14;
-            this.bntSavePart.Text = "Guardar";
-            this.bntSavePart.UseVisualStyleBackColor = true;
-            // 
-            // TxtBoxManagePart
-            // 
-            this.TxtBoxManagePart.Location = new System.Drawing.Point(82, 252);
-            this.TxtBoxManagePart.Name = "TxtBoxManagePart";
-            this.TxtBoxManagePart.Size = new System.Drawing.Size(106, 22);
-            this.TxtBoxManagePart.TabIndex = 15;
-            // 
-            // TxtBoxQuantity
-            // 
-            this.TxtBoxQuantity.Location = new System.Drawing.Point(82, 296);
-            this.TxtBoxQuantity.Name = "TxtBoxQuantity";
-            this.TxtBoxQuantity.Size = new System.Drawing.Size(106, 22);
-            this.TxtBoxQuantity.TabIndex = 16;
-            // 
-            // TxtBoxPrice
-            // 
-            this.TxtBoxPrice.Location = new System.Drawing.Point(82, 348);
-            this.TxtBoxPrice.Name = "TxtBoxPrice";
-            this.TxtBoxPrice.Size = new System.Drawing.Size(106, 22);
-            this.TxtBoxPrice.TabIndex = 17;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 233);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Nombre";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 277);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 16);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Cantidad";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 329);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Precio";
             // 
             // AdminForm
             // 
