@@ -49,14 +49,15 @@
             this.TxtBoxNombreAdmin = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.GBModifyPart = new System.Windows.Forms.GroupBox();
-            this.lblPart = new System.Windows.Forms.Label();
             this.lvtienda = new System.Windows.Forms.ListView();
             this.Imagen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblPart = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.bntSavePart = new System.Windows.Forms.Button();
             this.GBManagement.SuspendLayout();
             this.GBModifyPart.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +100,6 @@
             this.CBManagePart.Name = "CBManagePart";
             this.CBManagePart.Size = new System.Drawing.Size(151, 24);
             this.CBManagePart.TabIndex = 7;
-            this.CBManagePart.SelectedIndexChanged += new System.EventHandler(this.CBManagePart_SelectedIndexChanged);
             // 
             // lblManagePart
             // 
@@ -153,27 +153,27 @@
             this.GBManagement.Size = new System.Drawing.Size(191, 428);
             this.GBManagement.TabIndex = 10;
             this.GBManagement.TabStop = false;
-            this.GBManagement.Text = "MODIFY PASSWORD ADMIN";
+            this.GBManagement.Text = "MODIFICAR CONTRASEÑA ADMIN";
             // 
             // btnSaveAdmin
             // 
             this.btnSaveAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAdmin.Location = new System.Drawing.Point(20, 329);
+            this.btnSaveAdmin.Location = new System.Drawing.Point(20, 339);
             this.btnSaveAdmin.Name = "btnSaveAdmin";
-            this.btnSaveAdmin.Size = new System.Drawing.Size(133, 23);
+            this.btnSaveAdmin.Size = new System.Drawing.Size(146, 31);
             this.btnSaveAdmin.TabIndex = 9;
-            this.btnSaveAdmin.Text = "Save";
+            this.btnSaveAdmin.Text = "Guardar";
             this.btnSaveAdmin.UseVisualStyleBackColor = true;
             this.btnSaveAdmin.Click += new System.EventHandler(this.btnSaveAdmin_Click);
             // 
             // btnShowPassword
             // 
-            this.btnShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowPassword.Location = new System.Drawing.Point(19, 288);
             this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(134, 23);
+            this.btnShowPassword.Size = new System.Drawing.Size(147, 35);
             this.btnShowPassword.TabIndex = 8;
-            this.btnShowPassword.Text = "Show Password";
+            this.btnShowPassword.Text = "Muestra Contraseña";
             this.btnShowPassword.UseVisualStyleBackColor = true;
             this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
@@ -181,7 +181,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 219);
+            this.label2.Location = new System.Drawing.Point(17, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 17);
             this.label2.TabIndex = 7;
@@ -190,10 +190,10 @@
             // TxtBoxRepeatNewPass
             // 
             this.TxtBoxRepeatNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBoxRepeatNewPass.Location = new System.Drawing.Point(20, 238);
+            this.TxtBoxRepeatNewPass.Location = new System.Drawing.Point(20, 260);
             this.TxtBoxRepeatNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxRepeatNewPass.Name = "TxtBoxRepeatNewPass";
-            this.TxtBoxRepeatNewPass.Size = new System.Drawing.Size(133, 23);
+            this.TxtBoxRepeatNewPass.Size = new System.Drawing.Size(146, 23);
             this.TxtBoxRepeatNewPass.TabIndex = 6;
             this.TxtBoxRepeatNewPass.UseSystemPasswordChar = true;
             this.TxtBoxRepeatNewPass.TextChanged += new System.EventHandler(this.TxtBoxRepeatNewPass_TextChanged);
@@ -215,7 +215,7 @@
             this.TxtBoxOldPassword.Location = new System.Drawing.Point(20, 130);
             this.TxtBoxOldPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxOldPassword.Name = "TxtBoxOldPassword";
-            this.TxtBoxOldPassword.Size = new System.Drawing.Size(133, 23);
+            this.TxtBoxOldPassword.Size = new System.Drawing.Size(146, 23);
             this.TxtBoxOldPassword.TabIndex = 4;
             this.TxtBoxOldPassword.UseSystemPasswordChar = true;
             this.TxtBoxOldPassword.TextChanged += new System.EventHandler(this.TxtBoxOldPassword_TextChanged);
@@ -235,7 +235,7 @@
             // 
             this.lblNameAdmin.AutoSize = true;
             this.lblNameAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameAdmin.Location = new System.Drawing.Point(16, 59);
+            this.lblNameAdmin.Location = new System.Drawing.Point(17, 59);
             this.lblNameAdmin.Name = "lblNameAdmin";
             this.lblNameAdmin.Size = new System.Drawing.Size(73, 17);
             this.lblNameAdmin.TabIndex = 2;
@@ -247,7 +247,7 @@
             this.TxtBoxNewPassword.Location = new System.Drawing.Point(20, 183);
             this.TxtBoxNewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxNewPassword.Name = "TxtBoxNewPassword";
-            this.TxtBoxNewPassword.Size = new System.Drawing.Size(133, 23);
+            this.TxtBoxNewPassword.Size = new System.Drawing.Size(146, 23);
             this.TxtBoxNewPassword.TabIndex = 1;
             this.TxtBoxNewPassword.UseSystemPasswordChar = true;
             this.TxtBoxNewPassword.TextChanged += new System.EventHandler(this.TxtBoxNewPassword_TextChanged);
@@ -258,7 +258,7 @@
             this.TxtBoxNombreAdmin.Location = new System.Drawing.Point(20, 78);
             this.TxtBoxNombreAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxNombreAdmin.Name = "TxtBoxNombreAdmin";
-            this.TxtBoxNombreAdmin.Size = new System.Drawing.Size(133, 23);
+            this.TxtBoxNombreAdmin.Size = new System.Drawing.Size(146, 23);
             this.TxtBoxNombreAdmin.TabIndex = 0;
             this.TxtBoxNombreAdmin.TextChanged += new System.EventHandler(this.TxtBoxNombreAdmin_TextChanged);
             // 
@@ -275,6 +275,7 @@
             // 
             // GBModifyPart
             // 
+            this.GBModifyPart.Controls.Add(this.bntSavePart);
             this.GBModifyPart.Controls.Add(this.lvtienda);
             this.GBModifyPart.Controls.Add(this.lblPart);
             this.GBModifyPart.Enabled = false;
@@ -283,15 +284,7 @@
             this.GBModifyPart.Size = new System.Drawing.Size(539, 428);
             this.GBModifyPart.TabIndex = 12;
             this.GBModifyPart.TabStop = false;
-            this.GBModifyPart.Text = "MODIFY PART";
-            // 
-            // lblPart
-            // 
-            this.lblPart.AutoSize = true;
-            this.lblPart.Location = new System.Drawing.Point(47, 22);
-            this.lblPart.Name = "lblPart";
-            this.lblPart.Size = new System.Drawing.Size(0, 16);
-            this.lblPart.TabIndex = 0;
+            this.GBModifyPart.Text = "MODIFICAR PARTE";
             // 
             // lvtienda
             // 
@@ -302,38 +295,47 @@
             this.Cantidad,
             this.Precio});
             this.lvtienda.HideSelection = false;
-            this.lvtienda.Location = new System.Drawing.Point(22, 22);
+            this.lvtienda.Location = new System.Drawing.Point(22, 42);
             this.lvtienda.Margin = new System.Windows.Forms.Padding(4);
             this.lvtienda.Name = "lvtienda";
-            this.lvtienda.Size = new System.Drawing.Size(483, 330);
+            this.lvtienda.Size = new System.Drawing.Size(483, 159);
             this.lvtienda.TabIndex = 13;
             this.lvtienda.UseCompatibleStateImageBehavior = false;
             this.lvtienda.View = System.Windows.Forms.View.Details;
+            this.lvtienda.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.lvtienda_AfterLabelEdit);
             // 
             // Imagen
             // 
             this.Imagen.Text = "Imagen";
-            this.Imagen.Width = 78;
+            this.Imagen.Width = 106;
             // 
             // ID
             // 
             this.ID.Text = "ID";
-            this.ID.Width = 43;
+            this.ID.Width = 54;
             // 
             // Nombre
             // 
             this.Nombre.Text = "Nombre";
-            this.Nombre.Width = 103;
+            this.Nombre.Width = 123;
             // 
             // Cantidad
             // 
             this.Cantidad.Text = "Cantidad";
-            this.Cantidad.Width = 70;
+            this.Cantidad.Width = 87;
             // 
             // Precio
             // 
             this.Precio.Text = "Precio";
             this.Precio.Width = 57;
+            // 
+            // lblPart
+            // 
+            this.lblPart.AutoSize = true;
+            this.lblPart.Location = new System.Drawing.Point(47, 22);
+            this.lblPart.Name = "lblPart";
+            this.lblPart.Size = new System.Drawing.Size(0, 16);
+            this.lblPart.TabIndex = 0;
             // 
             // imageList1
             // 
@@ -369,6 +371,15 @@
             this.imageList1.Images.SetKeyName(27, "90.JPG");
             this.imageList1.Images.SetKeyName(28, "91.JPG");
             this.imageList1.Images.SetKeyName(29, "92.JPG");
+            // 
+            // bntSavePart
+            // 
+            this.bntSavePart.Location = new System.Drawing.Point(413, 339);
+            this.bntSavePart.Name = "bntSavePart";
+            this.bntSavePart.Size = new System.Drawing.Size(92, 37);
+            this.bntSavePart.TabIndex = 14;
+            this.bntSavePart.Text = "Guardar";
+            this.bntSavePart.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 
@@ -427,6 +438,7 @@
         private System.Windows.Forms.ColumnHeader Precio;
         private System.Windows.Forms.ImageList imageList1;
         public System.Windows.Forms.ListView lvtienda;
+        private System.Windows.Forms.Button bntSavePart;
     }
 }
 

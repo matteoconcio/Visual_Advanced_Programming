@@ -21,6 +21,8 @@ namespace PF_CA81492KO_20517869Y
             InitializeComponent();
            PopulateAdminCombox();
             GBManagement.Enabled = false;
+            GBModifyPart.Enabled = false;
+            lvtienda.Enabled = false;
         }
         SqlConnection sqlConnection = new SqlConnection("server=MATTASUS\\SQLEXPRESS;database=master; Integrated Security=SSPI");
 
@@ -206,18 +208,14 @@ namespace PF_CA81492KO_20517869Y
             TxtBoxRepeatNewPass.UseSystemPasswordChar = isVisible;
         }
 
+        
         private void btnManagePart_Click(object sender, EventArgs e)
         {
-            //enable GBModifyPart
             GBModifyPart.Enabled = true;
-
-            //pupulate parts
-
-        }
-
-        private void CBManagePart_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            lvtienda.Enabled = true;
             CargarDatosTienda();
+            lvtienda.LabelEdit = true;
+
         }
 
         private void CargarDatosTienda()
@@ -315,6 +313,70 @@ namespace PF_CA81492KO_20517869Y
 
         }
 
-        
+        //no funciona
+        private void lvtienda_AfterLabelEdit(object sender, LabelEditEventArgs e)
+        {
+            if (e.Label != null)
+            {
+                ListViewItem editedItem = lvtienda.Items[e.Item];
+
+                // Get the ID of the product from the second subitem (assuming it contains the ID)
+                string id = editedItem.SubItems[1].Text;
+
+                string columnName;
+                double newValue;
+
+                // Determine which column is being edited based on the provided label
+                if (e.Item == 3) // Quantity column (assuming Quantity is at index 3)
+                {
+                    columnName = "Unidades";
+                }
+                else if (e.Item == 4) // Price column (assuming Price is at index 4)
+                {
+                    columnName = "Precio";
+                }
+                else
+                {
+                    MessageBox.Show("Invalid column index.");
+                    return;
+                }
+
+                // Parse the edited value
+                if (!double.TryParse(e.Label, out newValue))
+                {
+                    MessageBox.Show("Please enter a valid numeric value.");
+                    return;
+                }
+
+                // Update the corresponding record in the database
+                string query = $"UPDATE {CBManagePart.SelectedItem.ToString()} SET [{columnName}] = @NewValue WHERE ID = @ID";
+
+                using (SqlConnection connection = new SqlConnection(ConexionBD.Conexion.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@NewValue", newValue);
+                    cmd.Parameters.AddWithValue("@ID", id);
+
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Value updated successfully.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update value.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating value: " + ex.Message);
+                    }
+                }
+            }
+        }
     }
 }
+

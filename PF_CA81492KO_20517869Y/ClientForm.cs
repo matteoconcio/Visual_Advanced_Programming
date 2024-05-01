@@ -51,7 +51,6 @@ namespace PF_CA81492KO_20517869Y
             // Obtener el tipo seleccionado
             string tipo = cbTipo.SelectedItem.ToString();
 
-
             // Realizar la consulta SQL para obtener los datos del tipo seleccionado
             string query = $"SELECT ID, Nombre, Unidades, Precio FROM {tipo}";
 
