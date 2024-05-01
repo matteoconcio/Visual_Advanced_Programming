@@ -294,7 +294,7 @@ namespace PF_CA81492KO_20517869Y
         {
             if (MessageBox.Show("SALIR DE LA APLICACION?", "SALIDA", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                Application.Exit();
+               this.Close();
             }
         }
     }

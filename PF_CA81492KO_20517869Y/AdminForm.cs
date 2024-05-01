@@ -106,7 +106,7 @@ namespace PF_CA81492KO_20517869Y
         {
             if (MessageBox.Show("SALIR DE LA APLICACION?", "SALIDA", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                Application.Exit();
+                this.Close();
             }
         }
 
@@ -331,6 +331,113 @@ namespace PF_CA81492KO_20517869Y
                 TxtBoxManagePart.Clear();
                 TxtBoxQuantity.Clear();
                 TxtBoxPrice.Clear();
+            }
+        }
+
+        private void bntSavePart_Click(object sender, EventArgs e)
+        {
+            if (lvtienda.SelectedItems.Count > 0)
+            {
+                // Get the selected item
+                ListViewItem selectedItem = lvtienda.SelectedItems[0];
+
+                // Get the ID of the selected item (assuming it's in the first subitem)
+                string id = selectedItem.SubItems[0].Text;
+
+                // Get the new quantity and price from the textboxes
+                string newQuantity = TxtBoxQuantity.Text;
+                string newPrice = TxtBoxPrice.Text;
+
+                // Validate the input (quantity and price should be numeric)
+                int quantity;
+                double price;
+
+                // Check if new quantity is provided and parse it
+                if (!string.IsNullOrWhiteSpace(newQuantity))
+                {
+                    if (!int.TryParse(newQuantity, out quantity))
+                    {
+                        MessageBox.Show("Please enter a valid integer value for quantity.");
+                        return;
+                    }
+                }
+
+                // Check if new price is provided and parse it
+                if (!string.IsNullOrWhiteSpace(newPrice))
+                {
+                    if (!double.TryParse(newPrice, out price))
+                    {
+                        MessageBox.Show("Please enter a valid numeric value for price.");
+                        return;
+                    }
+                }
+
+                // Update the corresponding record in the database
+                string query = $"UPDATE {CBManagePart.SelectedItem.ToString()} SET ";
+
+                // Add quantity update if provided
+                if (!string.IsNullOrWhiteSpace(newQuantity))
+                {
+                    query += "[Unidades] = @NewQuantity";
+                }
+
+                // Add price update if provided
+                if (!string.IsNullOrWhiteSpace(newPrice))
+                {
+                    query += string.IsNullOrWhiteSpace(newQuantity) ? "" : ", ";
+                    query += "[Precio] = @NewPrice";
+                }
+
+                query += " WHERE ID = @ID";
+
+                using (SqlConnection connection = new SqlConnection(ConexionBD.Conexion.ConnectionString))
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    if (!string.IsNullOrWhiteSpace(newQuantity))
+                    {
+                        cmd.Parameters.AddWithValue("@NewQuantity", newQuantity);
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(newPrice))
+                    {
+                        cmd.Parameters.AddWithValue("@NewPrice", newPrice);
+                    }
+
+                    cmd.Parameters.AddWithValue("@ID", id);
+
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Changes saved successfully.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to save changes.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error saving changes: " + ex.Message);
+                    }
+                }
+
+                // Update the ListView with the new values if any changes were made
+                if (!string.IsNullOrWhiteSpace(newQuantity))
+                {
+                    selectedItem.SubItems[3].Text = newQuantity;
+                }
+
+                if (!string.IsNullOrWhiteSpace(newPrice))
+                {
+                    selectedItem.SubItems[4].Text = newPrice;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an item to save changes.");
             }
         }
     }

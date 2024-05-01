@@ -355,6 +355,7 @@
             this.bntSavePart.TabIndex = 14;
             this.bntSavePart.Text = "Guardar";
             this.bntSavePart.UseVisualStyleBackColor = true;
+            this.bntSavePart.Click += new System.EventHandler(this.bntSavePart_Click);
             // 
             // lvtienda
             // 

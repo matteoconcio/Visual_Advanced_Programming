@@ -25,13 +25,27 @@ namespace PF_CA81492KO_20517869Y
         public class ConexionBD
         {
             public static SqlConnection Conexion { get; private set; }
-
+            private static string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
             static ConexionBD()
             {
-                // Initialize the connection string
-                string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
                 // Create and initialize the SqlConnection object
                 Conexion = new SqlConnection(connectionString);
+            }
+
+            public static void OpenConnection()
+            {
+                if(Conexion.State != ConnectionState.Closed)
+                {
+                    Conexion.Close();
+                }
+            }
+
+            public static void CloseConnection()
+            {
+                if(Conexion.State != ConnectionState.Closed)
+                {
+                    Conexion.Close();
+                }
             }
         }
 
@@ -132,6 +146,11 @@ namespace PF_CA81492KO_20517869Y
         {
             bool showPassword = !TxtBoxPassword.UseSystemPasswordChar;
             TxtBoxPassword.UseSystemPasswordChar = showPassword;
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+           ConexionBD.OpenConnection();
         }
     }
 
