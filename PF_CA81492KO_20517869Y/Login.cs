@@ -29,7 +29,7 @@ namespace PF_CA81492KO_20517869Y
             static ConexionBD()
             {
                 // Initialize the connection string
-                string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Integrated Security=SSPI";
+                string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
                 // Create and initialize the SqlConnection object
                 Conexion = new SqlConnection(connectionString);
             }
@@ -38,7 +38,7 @@ namespace PF_CA81492KO_20517869Y
         //btnExit works properly
         private void bntExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("EXIT FROM APPLICATION?", "EXIT", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("SALIR DE LA APLICACION?", "SALIDA", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 Application.Exit();
             }

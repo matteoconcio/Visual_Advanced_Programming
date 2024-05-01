@@ -52,6 +52,7 @@
             this.Cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labeltotal
@@ -87,7 +88,7 @@
             // btncarrito
             // 
             this.btncarrito.Location = new System.Drawing.Point(477, 28);
-            this.btncarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncarrito.Margin = new System.Windows.Forms.Padding(4);
             this.btncarrito.Name = "btncarrito";
             this.btncarrito.Size = new System.Drawing.Size(116, 54);
             this.btncarrito.TabIndex = 19;
@@ -110,7 +111,7 @@
             "Plato",
             "Sillin"});
             this.cbTipo.Location = new System.Drawing.Point(35, 57);
-            this.cbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(160, 24);
             this.cbTipo.TabIndex = 18;
@@ -127,8 +128,8 @@
             // 
             // btnfinalizar
             // 
-            this.btnfinalizar.Location = new System.Drawing.Point(1005, 420);
-            this.btnfinalizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnfinalizar.Location = new System.Drawing.Point(891, 420);
+            this.btnfinalizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnfinalizar.Name = "btnfinalizar";
             this.btnfinalizar.Size = new System.Drawing.Size(116, 54);
             this.btnfinalizar.TabIndex = 16;
@@ -138,8 +139,8 @@
             // 
             // btnborrarcarrito
             // 
-            this.btnborrarcarrito.Location = new System.Drawing.Point(829, 420);
-            this.btnborrarcarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnborrarcarrito.Location = new System.Drawing.Point(767, 420);
+            this.btnborrarcarrito.Margin = new System.Windows.Forms.Padding(4);
             this.btnborrarcarrito.Name = "btnborrarcarrito";
             this.btnborrarcarrito.Size = new System.Drawing.Size(116, 54);
             this.btnborrarcarrito.TabIndex = 15;
@@ -150,7 +151,7 @@
             // btnborrararticulo
             // 
             this.btnborrararticulo.Location = new System.Drawing.Point(643, 420);
-            this.btnborrararticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnborrararticulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnborrararticulo.Name = "btnborrararticulo";
             this.btnborrararticulo.Size = new System.Drawing.Size(116, 54);
             this.btnborrararticulo.TabIndex = 14;
@@ -168,7 +169,7 @@
             this.columnHeader5});
             this.lvcarrito.HideSelection = false;
             this.lvcarrito.Location = new System.Drawing.Point(643, 98);
-            this.lvcarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvcarrito.Margin = new System.Windows.Forms.Padding(4);
             this.lvcarrito.Name = "lvcarrito";
             this.lvcarrito.Size = new System.Drawing.Size(477, 282);
             this.lvcarrito.TabIndex = 13;
@@ -210,7 +211,7 @@
             this.Precio});
             this.lvtienda.HideSelection = false;
             this.lvtienda.Location = new System.Drawing.Point(35, 98);
-            this.lvtienda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvtienda.Margin = new System.Windows.Forms.Padding(4);
             this.lvtienda.Name = "lvtienda";
             this.lvtienda.Size = new System.Drawing.Size(557, 374);
             this.lvtienda.SmallImageList = this.imageList1;
@@ -278,6 +279,17 @@
             this.imageList1.Images.SetKeyName(28, "91.JPG");
             this.imageList1.Images.SetKeyName(29, "92.JPG");
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(1015, 420);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(116, 54);
+            this.btnExit.TabIndex = 23;
+            this.btnExit.Text = "Salir";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,6 +297,7 @@
             this.BackgroundImage = global::PF_CA81492KO_20517869Y.Properties.Resources.background_main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1149, 506);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.labeltotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -329,5 +342,6 @@
         private System.Windows.Forms.ColumnHeader Cantidad;
         private System.Windows.Forms.ColumnHeader Precio;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btnExit;
     }
 }

@@ -100,7 +100,7 @@ namespace PF_CA81492KO_20517869Y
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("EXIT FROM APPLICATION?", "EXIT", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("SALIR DE LA APLICACION?", "SALIDA", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 Application.Exit();
             }
@@ -111,7 +111,7 @@ namespace PF_CA81492KO_20517869Y
                 string oldPassword = TxtBoxOldPassword.Text;
                 string newPassword = TxtBoxNewPassword.Text;
                 string confirmPassword = TxtBoxRepeatNewPass.Text;
-                string selectedUsername = TxtBoxNombreAdmin.Text; //assuming TxtBoxNombreAdmin contains admin username
+                string selectedUsername = TxtBoxNombreAdmin.Text;
 
                 //check if the old password matches the password in the database for the selected username
                 string query = "SELECT Password FROM Admins WHERE Username = @Username";
@@ -202,6 +202,45 @@ namespace PF_CA81492KO_20517869Y
             TxtBoxOldPassword.UseSystemPasswordChar = isVisible;
             TxtBoxNewPassword.UseSystemPasswordChar = isVisible;
             TxtBoxRepeatNewPass.UseSystemPasswordChar = isVisible;
+        }
+
+        private void btnManagePart_Click(object sender, EventArgs e)
+        {
+            //enable GBModifyPart
+            GBModifyPart.Enabled = true;
+
+            //pupulate parts
+
+        }
+
+        private void TxtBoxRepeatNewPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtBoxOldPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblModifyPasswordAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtBoxNewPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtBoxNombreAdmin_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

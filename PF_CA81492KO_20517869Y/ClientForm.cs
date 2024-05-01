@@ -290,5 +290,13 @@ namespace PF_CA81492KO_20517869Y
             MessageBox.Show("Factura generada correctamente en la carpeta de facturas.", "Factura Generada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("SALIR DE LA APLICACION?", "SALIDA", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
