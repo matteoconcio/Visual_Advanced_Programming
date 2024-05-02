@@ -208,7 +208,13 @@ namespace PF_CA81492KO_20517869Y
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Salir de la aplicacion?", "SALIDA", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)== DialogResult.OK){
+                ClientForm clientForm = Application.OpenForms.OfType<ClientForm>().FirstOrDefault();
+                clientForm?.Close(); // Close only if not null
+
+                // Close the current form
+                this.Close();
+            }
         }
 
         private void btnFinalizarBicicleta_Click(object sender, EventArgs e)
