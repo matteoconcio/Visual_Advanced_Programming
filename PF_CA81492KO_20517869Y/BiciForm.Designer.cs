@@ -45,11 +45,8 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvModelo = new System.Windows.Forms.ListView();
-            this.Imagen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnExit
@@ -121,6 +118,7 @@
             this.cbModelo.Name = "cbModelo";
             this.cbModelo.Size = new System.Drawing.Size(160, 24);
             this.cbModelo.TabIndex = 32;
+            this.cbModelo.SelectedIndexChanged += new System.EventHandler(this.cbModelo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -207,11 +205,8 @@
             // lvModelo
             // 
             this.lvModelo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Imagen,
-            this.ID,
-            this.Nombre,
-            this.Cantidad,
-            this.Precio});
+            this.nombre,
+            this.precio});
             this.lvModelo.HideSelection = false;
             this.lvModelo.Location = new System.Drawing.Point(27, 131);
             this.lvModelo.Margin = new System.Windows.Forms.Padding(4);
@@ -221,30 +216,15 @@
             this.lvModelo.UseCompatibleStateImageBehavior = false;
             this.lvModelo.View = System.Windows.Forms.View.Details;
             // 
-            // Imagen
+            // nombre
             // 
-            this.Imagen.Text = "Imagen";
-            this.Imagen.Width = 111;
+            this.nombre.Text = "Nombre";
+            this.nombre.Width = 103;
             // 
-            // ID
+            // precio
             // 
-            this.ID.Text = "ID";
-            this.ID.Width = 43;
-            // 
-            // Nombre
-            // 
-            this.Nombre.Text = "Nombre";
-            this.Nombre.Width = 103;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.Text = "Cantidad";
-            this.Cantidad.Width = 70;
-            // 
-            // Precio
-            // 
-            this.Precio.Text = "Precio";
-            this.Precio.Width = 57;
+            this.precio.Text = "Precio";
+            this.precio.Width = 57;
             // 
             // BiciForm
             // 
@@ -292,10 +272,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ListView lvModelo;
-        private System.Windows.Forms.ColumnHeader Imagen;
-        private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader Nombre;
-        private System.Windows.Forms.ColumnHeader Cantidad;
-        private System.Windows.Forms.ColumnHeader Precio;
+        private System.Windows.Forms.ColumnHeader nombre;
+        private System.Windows.Forms.ColumnHeader precio;
     }
 }
