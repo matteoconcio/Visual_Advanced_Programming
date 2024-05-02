@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnfinalizar = new System.Windows.Forms.Button();
             this.btnborrarcarrito = new System.Windows.Forms.Button();
-            this.btnborrararticulo = new System.Windows.Forms.Button();
             this.lvCarritoBicicleta = new System.Windows.Forms.ListView();
             this.columnPiezoBiciNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnPiezoBiciPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,13 +47,14 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(1008, 421);
+            this.btnExit.Location = new System.Drawing.Point(997, 421);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(116, 54);
             this.btnExit.TabIndex = 37;
             this.btnExit.Text = "Salir";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // labelTotalBici
             // 
@@ -130,7 +130,7 @@
             // 
             // btnfinalizar
             // 
-            this.btnfinalizar.Location = new System.Drawing.Point(884, 421);
+            this.btnfinalizar.Location = new System.Drawing.Point(804, 421);
             this.btnfinalizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnfinalizar.Name = "btnfinalizar";
             this.btnfinalizar.Size = new System.Drawing.Size(116, 54);
@@ -140,23 +140,14 @@
             // 
             // btnborrarcarrito
             // 
-            this.btnborrarcarrito.Location = new System.Drawing.Point(760, 421);
+            this.btnborrarcarrito.Location = new System.Drawing.Point(636, 421);
             this.btnborrarcarrito.Margin = new System.Windows.Forms.Padding(4);
             this.btnborrarcarrito.Name = "btnborrarcarrito";
             this.btnborrarcarrito.Size = new System.Drawing.Size(116, 54);
             this.btnborrarcarrito.TabIndex = 29;
             this.btnborrarcarrito.Text = "Borrar carrito";
             this.btnborrarcarrito.UseVisualStyleBackColor = true;
-            // 
-            // btnborrararticulo
-            // 
-            this.btnborrararticulo.Location = new System.Drawing.Point(636, 421);
-            this.btnborrararticulo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnborrararticulo.Name = "btnborrararticulo";
-            this.btnborrararticulo.Size = new System.Drawing.Size(116, 54);
-            this.btnborrararticulo.TabIndex = 28;
-            this.btnborrararticulo.Text = "Borrar artículo";
-            this.btnborrararticulo.UseVisualStyleBackColor = true;
+            this.btnborrarcarrito.Click += new System.EventHandler(this.btnborrarcarrito_Click);
             // 
             // lvCarritoBicicleta
             // 
@@ -222,7 +213,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnfinalizar);
             this.Controls.Add(this.btnborrarcarrito);
-            this.Controls.Add(this.btnborrararticulo);
             this.Controls.Add(this.lvCarritoBicicleta);
             this.Controls.Add(this.lvModelo);
             this.Name = "BiciForm";
@@ -244,7 +234,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnfinalizar;
         private System.Windows.Forms.Button btnborrarcarrito;
-        private System.Windows.Forms.Button btnborrararticulo;
         private System.Windows.Forms.ListView lvCarritoBicicleta;
         private System.Windows.Forms.ColumnHeader columnPiezoBiciNombre;
         private System.Windows.Forms.ColumnHeader ColumnPiezoBiciPrecio;

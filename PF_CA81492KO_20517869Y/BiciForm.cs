@@ -179,7 +179,7 @@ namespace PF_CA81492KO_20517869Y
             // Refresh the display of the shopping cart (e.g., update a ListBox, DataGridView, etc.)
             RefreshShoppingCartDisplay();
         }
-       
+
 
         // Method to refresh the display of the shopping cart
         private void RefreshShoppingCartDisplay()
@@ -195,6 +195,18 @@ namespace PF_CA81492KO_20517869Y
                 lvcarrito.SubItems.Add(item.PiecePrice.ToString() + "€");
                 lvCarritoBicicleta.Items.Add(lvcarrito);
             }
+        }
+
+        private void btnborrarcarrito_Click(object sender, EventArgs e)
+        {
+            lvCarritoBicicleta.Items.Clear();
+
+            labelTotalBici.Text = "0.00€";
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

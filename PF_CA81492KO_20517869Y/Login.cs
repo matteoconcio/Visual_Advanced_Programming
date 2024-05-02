@@ -152,6 +152,21 @@ namespace PF_CA81492KO_20517869Y
         {
            ConexionBD.OpenConnection();
         }
+
+        private void TxtBoxPassword_Enter(object sender, EventArgs e)
+        {
+            btnLogin_Click(sender, e);
+        }
+
+        private void TxtBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if the Enter key was pressed
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Perform the login action
+                btnLogin.PerformClick();
+            }
+        }
     }
 
 }

@@ -93,6 +93,7 @@
             this.TxtBoxPassword.Size = new System.Drawing.Size(109, 22);
             this.TxtBoxPassword.TabIndex = 4;
             this.TxtBoxPassword.UseSystemPasswordChar = true;
+            this.TxtBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBoxPassword_KeyDown);
             // 
             // btnLogin
             // 
