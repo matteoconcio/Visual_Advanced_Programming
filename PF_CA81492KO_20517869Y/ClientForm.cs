@@ -281,9 +281,9 @@ namespace PF_CA81492KO_20517869Y
             string filePath = System.IO.Path.Combine(facturasPath, $"Factura_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.xlsx");
             workbook.SaveAs(filePath);
 
-            // Liberar recursos
-            workbook.Close();
-            excelApp.Quit();
+            // Liberar recursos [opcionales, quiero ver la factura]
+            //workbook.Close();
+            //excelApp.Quit();
 
             // Mostrar mensaje de confirmación
             MessageBox.Show("Factura generada correctamente en la carpeta de facturas.", "Factura Generada", MessageBoxButtons.OK, MessageBoxIcon.Information);

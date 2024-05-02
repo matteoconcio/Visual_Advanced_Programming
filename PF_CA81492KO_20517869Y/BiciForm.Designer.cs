@@ -35,7 +35,7 @@
             this.btncarrito = new System.Windows.Forms.Button();
             this.cbModelo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnfinalizar = new System.Windows.Forms.Button();
+            this.btnFinalizarBicicleta = new System.Windows.Forms.Button();
             this.btnborrarcarrito = new System.Windows.Forms.Button();
             this.lvCarritoBicicleta = new System.Windows.Forms.ListView();
             this.columnPiezoBiciNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -128,15 +128,16 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Modelo de Bicicleta";
             // 
-            // btnfinalizar
+            // btnFinalizarBicicleta
             // 
-            this.btnfinalizar.Location = new System.Drawing.Point(804, 421);
-            this.btnfinalizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnfinalizar.Name = "btnfinalizar";
-            this.btnfinalizar.Size = new System.Drawing.Size(116, 54);
-            this.btnfinalizar.TabIndex = 30;
-            this.btnfinalizar.Text = "Finalizar";
-            this.btnfinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizarBicicleta.Location = new System.Drawing.Point(804, 421);
+            this.btnFinalizarBicicleta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFinalizarBicicleta.Name = "btnFinalizarBicicleta";
+            this.btnFinalizarBicicleta.Size = new System.Drawing.Size(116, 54);
+            this.btnFinalizarBicicleta.TabIndex = 30;
+            this.btnFinalizarBicicleta.Text = "Finalizar";
+            this.btnFinalizarBicicleta.UseVisualStyleBackColor = true;
+            this.btnFinalizarBicicleta.Click += new System.EventHandler(this.btnFinalizarBicicleta_Click);
             // 
             // btnborrarcarrito
             // 
@@ -211,7 +212,7 @@
             this.Controls.Add(this.btncarrito);
             this.Controls.Add(this.cbModelo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnfinalizar);
+            this.Controls.Add(this.btnFinalizarBicicleta);
             this.Controls.Add(this.btnborrarcarrito);
             this.Controls.Add(this.lvCarritoBicicleta);
             this.Controls.Add(this.lvModelo);
@@ -232,7 +233,7 @@
         private System.Windows.Forms.Button btncarrito;
         private System.Windows.Forms.ComboBox cbModelo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnfinalizar;
+        private System.Windows.Forms.Button btnFinalizarBicicleta;
         private System.Windows.Forms.Button btnborrarcarrito;
         private System.Windows.Forms.ListView lvCarritoBicicleta;
         private System.Windows.Forms.ColumnHeader columnPiezoBiciNombre;

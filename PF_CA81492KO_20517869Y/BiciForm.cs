@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeOpenXml;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace PF_CA81492KO_20517869Y
 {
@@ -208,5 +210,53 @@ namespace PF_CA81492KO_20517869Y
         {
             this.Close();
         }
+
+        private void btnFinalizarBicicleta_Click(object sender, EventArgs e)
+        {
+            // Crear una aplicación Excel
+            Excel.Application excelApp = new Excel.Application();
+            excelApp.Visible = true;
+
+            // Crear un nuevo libro de Excel
+            Excel.Workbook workbook = excelApp.Workbooks.Add();
+            Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Worksheets[1];
+
+            // Encabezados
+            worksheet.Cells[1, 1] = "Nombre";
+            worksheet.Cells[1, 2] = "Precio";
+
+            // Datos de lvcarritoBicicleta
+            int row = 2;
+            foreach (ListViewItem item in lvCarritoBicicleta.Items)
+            {
+                worksheet.Cells[row, 1] = item.SubItems[0].Text; // Nombre (assuming the name is in the first sub-item)
+                worksheet.Cells[row, 2] = item.SubItems[1].Text; // Precio (assuming the price is in the second sub-item)
+                row++;
+            }
+
+            // Precio total
+            worksheet.Cells[row, 3] = "Precio Total:";
+            worksheet.Cells[row, 4] = labelTotalBici.Text + "€";
+
+            // Fecha y hora
+            worksheet.Cells[row + 1, 3] = "Fecha:";
+            worksheet.Cells[row + 1, 4] = DateTime.Now.ToShortDateString();
+            worksheet.Cells[row + 2, 3] = "Hora:";
+            worksheet.Cells[row + 2, 4] = DateTime.Now.ToShortTimeString();
+
+            // Mensaje de agradecimiento
+            worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
+
+            // Guardar el libro de Excel en la carpeta del proyecto
+            string projectPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+            string facturasPath = System.IO.Path.Combine(projectPath, "facturas");
+            if (!System.IO.Directory.Exists(facturasPath))
+            {
+                System.IO.Directory.CreateDirectory(facturasPath);
+            }
+            string filePath = System.IO.Path.Combine(facturasPath, $"Factura_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.xlsx");
+            workbook.SaveAs(filePath);
+        }
+
     }
 }
