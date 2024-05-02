@@ -128,5 +128,73 @@ namespace PF_CA81492KO_20517869Y
                 }
             }
         }
+
+        public class ShoppingCartItem
+        {
+            public string PieceName { get; set; }
+            public decimal PiecePrice { get; set; }
+
+            public ShoppingCartItem(string pieceName, decimal piecePrice)
+            {
+                PieceName = pieceName;
+                PiecePrice = piecePrice;
+            }
+
+            // Override ToString method to display item information
+            public override string ToString()
+            {
+                return $"{PieceName}:  {PiecePrice.ToString()}€";
+            }
+        }
+
+        // Define a list to store items in the shopping cart
+        private List<ShoppingCartItem> shoppingCart = new List<ShoppingCartItem>();
+
+        // Event handler for adding items to the shopping cart
+        private void btncarrito_Click(object sender, EventArgs e)
+        {
+            decimal totalBici = 0;
+
+            // Add items from lvModelo to the shopping cart and calculate total price
+            foreach (ListViewItem item in lvModelo.Items)
+            {
+                string pieceName = item.SubItems[0].Text;
+                decimal piecePrice = int.Parse(item.SubItems[1].Text.TrimEnd('€')); // Remove '€' symbol and parse to decimal
+                totalBici += piecePrice;
+
+                // Add the piece to the shopping cart
+                AddToShoppingCart(pieceName, piecePrice);
+            }
+
+            // Display total price in labelTotalBici
+            labelTotalBici.Text = totalBici.ToString() + "€";
+        }
+
+        // Method to add an item to the shopping cart
+        private void AddToShoppingCart(string pieceName, decimal piecePrice)
+        {
+            // Create a new ShoppingCartItem and add it to the shopping cart list
+            shoppingCart.Add(new ShoppingCartItem(pieceName, piecePrice));
+
+            // Refresh the display of the shopping cart (e.g., update a ListBox, DataGridView, etc.)
+            RefreshShoppingCartDisplay();
+        }
+       
+
+        // Method to refresh the display of the shopping cart
+        private void RefreshShoppingCartDisplay()
+        {
+            // Clear the display of the shopping cart (e.g., ListBox)
+            lvCarritoBicicleta.Items.Clear();
+
+            // Add each item in the shopping cart to the display
+            foreach (var item in shoppingCart)
+            {
+                ListViewItem lvcarrito = new ListViewItem(item.PieceName);
+
+                lvcarrito.SubItems.Add(item.PiecePrice.ToString() + "€");
+                lvCarritoBicicleta.Items.Add(lvcarrito);
+            }
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnExit = new System.Windows.Forms.Button();
-            this.labeltotal = new System.Windows.Forms.Label();
+            this.labelTotalBici = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btncarrito = new System.Windows.Forms.Button();
@@ -39,11 +39,8 @@
             this.btnborrarcarrito = new System.Windows.Forms.Button();
             this.btnborrararticulo = new System.Windows.Forms.Button();
             this.lvCarritoBicicleta = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnPiezoBiciNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnPiezoBiciPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvModelo = new System.Windows.Forms.ListView();
             this.nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,15 +56,15 @@
             this.btnExit.Text = "Salir";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // labeltotal
+            // labelTotalBici
             // 
-            this.labeltotal.AutoSize = true;
-            this.labeltotal.Location = new System.Drawing.Point(1043, 96);
-            this.labeltotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labeltotal.Name = "labeltotal";
-            this.labeltotal.Size = new System.Drawing.Size(38, 16);
-            this.labeltotal.TabIndex = 36;
-            this.labeltotal.Text = "0.00€";
+            this.labelTotalBici.AutoSize = true;
+            this.labelTotalBici.Location = new System.Drawing.Point(1043, 96);
+            this.labelTotalBici.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTotalBici.Name = "labelTotalBici";
+            this.labelTotalBici.Size = new System.Drawing.Size(38, 16);
+            this.labelTotalBici.TabIndex = 36;
+            this.labelTotalBici.Text = "0.00€";
             // 
             // label3
             // 
@@ -98,6 +95,7 @@
             this.btncarrito.TabIndex = 33;
             this.btncarrito.Text = "Añadir al carrito";
             this.btncarrito.UseVisualStyleBackColor = true;
+            this.btncarrito.Click += new System.EventHandler(this.btncarrito_Click);
             // 
             // cbModelo
             // 
@@ -163,11 +161,8 @@
             // lvCarritoBicicleta
             // 
             this.lvCarritoBicicleta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
+            this.columnPiezoBiciNombre,
+            this.ColumnPiezoBiciPrecio});
             this.lvCarritoBicicleta.HideSelection = false;
             this.lvCarritoBicicleta.Location = new System.Drawing.Point(636, 131);
             this.lvCarritoBicicleta.Margin = new System.Windows.Forms.Padding(4);
@@ -177,30 +172,15 @@
             this.lvCarritoBicicleta.UseCompatibleStateImageBehavior = false;
             this.lvCarritoBicicleta.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // columnPiezoBiciNombre
             // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 34;
+            this.columnPiezoBiciNombre.Text = "Nombre";
+            this.columnPiezoBiciNombre.Width = 90;
             // 
-            // columnHeader2
+            // ColumnPiezoBiciPrecio
             // 
-            this.columnHeader2.Text = "Nombre";
-            this.columnHeader2.Width = 90;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Cantidad";
-            this.columnHeader3.Width = 76;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Precio";
-            this.columnHeader4.Width = 73;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Categoria";
-            this.columnHeader5.Width = 74;
+            this.ColumnPiezoBiciPrecio.Text = "Precio";
+            this.ColumnPiezoBiciPrecio.Width = 73;
             // 
             // lvModelo
             // 
@@ -234,7 +214,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1149, 504);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.labeltotal);
+            this.Controls.Add(this.labelTotalBici);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btncarrito);
@@ -256,7 +236,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label labeltotal;
+        private System.Windows.Forms.Label labelTotalBici;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btncarrito;
@@ -266,11 +246,8 @@
         private System.Windows.Forms.Button btnborrarcarrito;
         private System.Windows.Forms.Button btnborrararticulo;
         private System.Windows.Forms.ListView lvCarritoBicicleta;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnPiezoBiciNombre;
+        private System.Windows.Forms.ColumnHeader ColumnPiezoBiciPrecio;
         private System.Windows.Forms.ListView lvModelo;
         private System.Windows.Forms.ColumnHeader nombre;
         private System.Windows.Forms.ColumnHeader precio;
