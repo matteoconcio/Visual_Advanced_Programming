@@ -63,6 +63,10 @@ namespace PF_CA81492KO_20517869Y
             get { return UserType; }
             set { UserType = CbUserType.SelectedItem as string; }
         }
+        public static class GlobalVariables
+        {
+            public static string Username { get; set; }
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -101,6 +105,7 @@ namespace PF_CA81492KO_20517869Y
                             // abre AdminForm o ClientForm
                             if (userType == "Client")
                             {
+                                GlobalVariables.Username = username;
                                 ClientForm clientForm = new ClientForm();
                                 clientForm.ShowDialog();
                             }

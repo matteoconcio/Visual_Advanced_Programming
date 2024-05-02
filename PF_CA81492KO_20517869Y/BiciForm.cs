@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Azure.Identity;
 using OfficeOpenXml;
+using static PF_CA81492KO_20517869Y.Login;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace PF_CA81492KO_20517869Y
@@ -217,43 +219,44 @@ namespace PF_CA81492KO_20517869Y
             }
         }
 
+        string username = GlobalVariables.Username;
         private void btnFinalizarBicicleta_Click(object sender, EventArgs e)
         {
-            // Crear una aplicación Excel
+            //crear una aplicación Excel
             Excel.Application excelApp = new Excel.Application();
             excelApp.Visible = true;
 
-            // Crear un nuevo libro de Excel
+            //crear un nuevo libro de Excel
             Excel.Workbook workbook = excelApp.Workbooks.Add();
             Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Worksheets[1];
 
-            // Encabezados
+            //encabezados
             worksheet.Cells[1, 1] = "Nombre";
             worksheet.Cells[1, 2] = "Precio";
 
-            // Datos de lvcarritoBicicleta
+            //datos de lvcarritoBicicleta
             int row = 2;
             foreach (ListViewItem item in lvCarritoBicicleta.Items)
             {
-                worksheet.Cells[row, 1] = item.SubItems[0].Text; // Nombre (assuming the name is in the first sub-item)
-                worksheet.Cells[row, 2] = item.SubItems[1].Text; // Precio (assuming the price is in the second sub-item)
+                worksheet.Cells[row, 1] = item.SubItems[0].Text; //nombre
+                worksheet.Cells[row, 2] = item.SubItems[1].Text; //precio
                 row++;
             }
 
-            // Precio total
+            //precio total
             worksheet.Cells[row, 3] = "Precio Total:";
             worksheet.Cells[row, 4] = labelTotalBici.Text + "€";
 
-            // Fecha y hora
+            //fecha y hora
             worksheet.Cells[row + 1, 3] = "Fecha:";
             worksheet.Cells[row + 1, 4] = DateTime.Now.ToShortDateString();
             worksheet.Cells[row + 2, 3] = "Hora:";
             worksheet.Cells[row + 2, 4] = DateTime.Now.ToShortTimeString();
 
-            // Mensaje de agradecimiento
+            //mensaje de agradecimiento
             worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
 
-            // Guardar el libro de Excel en la carpeta del proyecto
+            //guardar el libro de Excel en la carpeta del proyecto
             string projectPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
             string facturasPath = System.IO.Path.Combine(projectPath, "facturas");
             if (!System.IO.Directory.Exists(facturasPath))
@@ -262,6 +265,84 @@ namespace PF_CA81492KO_20517869Y
             }
             string filePath = System.IO.Path.Combine(facturasPath, $"Factura_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.xlsx");
             workbook.SaveAs(filePath);
+
+            //poner la venta en la Tabla SQL
+            DateTime fechaVenta = DateTime.Now;
+
+            //obtener el cliente (podrías obtenerlo de algún control en tu formulario)
+            string cliente = username;
+
+            //guardar la información de la venta en la tabla Ventas
+            int ventaID = GuardarVenta(fechaVenta, cliente);
+
+            //guardar los detalles de la venta en la tabla DetalleVentas
+            foreach (ListViewItem item in lvCarritoBicicleta.Items)
+            {
+                string producto = item.SubItems[0].Text; //nombre
+                int precio = int.Parse(item.SubItems[1].Text.TrimEnd('€')); //precio
+                int cantidad = int.Parse(item.SubItems[2].Text); //cantidad
+
+                //guardar el detalle de la venta en la tabla DetalleVentas
+                GuardarDetalleVenta(ventaID, producto, precio, cantidad);
+            }
+        }
+
+        //guardar informacion ventas in tabla Ventas
+        private int GuardarVenta(DateTime fechaVenta, string cliente)
+        {
+            int ventaID=0;
+
+            string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
+            string query = "INSERT INTO Ventas (FechaVenta, Cliente) VALUES (@FechaVenta, @Cliente); SELECT SCOPE_IDENTITY();";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    //parametros
+                    command.Parameters.AddWithValue("@FechaVenta", fechaVenta);
+                    command.Parameters.AddWithValue("@Cliente", cliente);
+
+                    try
+                    {
+                        connection.Open();
+                        ventaID = Convert.ToInt32(command.ExecuteScalar());
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al guardar la venta: " + ex.Message);
+                    }
+                }
+            }
+            return ventaID;
+        }
+        //guardar detalles ventas in tabla DetallesVenta
+        private void GuardarDetalleVenta(int ventaID, string producto, int precio, int cantidad)
+        {
+            string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
+            string query = "INSERT INTO DetallesVenta (VentaID, Producto, Precio, Cantidad) VALUES (@VentaID, @Producto, @Precio, @Cantidad);";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    //parametros
+                    command.Parameters.AddWithValue("@VentaID", ventaID);
+                    command.Parameters.AddWithValue("@Producto", producto);
+                    command.Parameters.AddWithValue("@Precio", precio);
+                    command.Parameters.AddWithValue("@Cantidad", cantidad);
+
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al guardar los detalles de la venta: " + ex.Message);
+                    }
+                }
+            }
         }
 
     }
