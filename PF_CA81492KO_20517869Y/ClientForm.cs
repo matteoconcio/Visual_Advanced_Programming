@@ -297,5 +297,11 @@ namespace PF_CA81492KO_20517869Y
                this.Close();
             }
         }
+
+        private void btnBicicleta_Click(object sender, EventArgs e)
+        {
+            BiciForm biciForm = new BiciForm();
+            biciForm.ShowDialog();
+        }
     }
 }

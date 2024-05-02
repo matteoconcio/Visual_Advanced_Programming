@@ -83,9 +83,9 @@
             this.lblManageAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageAdmin.Location = new System.Drawing.Point(49, 16);
             this.lblManageAdmin.Name = "lblManageAdmin";
-            this.lblManageAdmin.Size = new System.Drawing.Size(157, 20);
+            this.lblManageAdmin.Size = new System.Drawing.Size(119, 20);
             this.lblManageAdmin.TabIndex = 4;
-            this.lblManageAdmin.Text = "Admin Management";
+            this.lblManageAdmin.Text = "Gestión Admin";
             // 
             // CBManagePart
             // 
@@ -113,9 +113,9 @@
             this.lblManagePart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagePart.Location = new System.Drawing.Point(293, 16);
             this.lblManagePart.Name = "lblManagePart";
-            this.lblManagePart.Size = new System.Drawing.Size(141, 20);
+            this.lblManagePart.Size = new System.Drawing.Size(121, 20);
             this.lblManagePart.TabIndex = 6;
-            this.lblManagePart.Text = "Part Management";
+            this.lblManagePart.Text = "Gestión Partes";
             // 
             // btnManageAdmin
             // 
@@ -124,7 +124,7 @@
             this.btnManageAdmin.Name = "btnManageAdmin";
             this.btnManageAdmin.Size = new System.Drawing.Size(150, 34);
             this.btnManageAdmin.TabIndex = 8;
-            this.btnManageAdmin.Text = "Manage Admin";
+            this.btnManageAdmin.Text = "Gestionar Admin";
             this.btnManageAdmin.UseVisualStyleBackColor = true;
             this.btnManageAdmin.Click += new System.EventHandler(this.btnManageAdmin_Click_1);
             // 
@@ -135,7 +135,7 @@
             this.btnManagePart.Name = "btnManagePart";
             this.btnManagePart.Size = new System.Drawing.Size(150, 34);
             this.btnManagePart.TabIndex = 9;
-            this.btnManagePart.Text = "Manage Part";
+            this.btnManagePart.Text = "Gestionar Parte";
             this.btnManagePart.UseVisualStyleBackColor = true;
             this.btnManagePart.Click += new System.EventHandler(this.btnManagePart_Click);
             // 
@@ -187,11 +187,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 241);
+            this.label2.Location = new System.Drawing.Point(9, 241);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 17);
+            this.label2.Size = new System.Drawing.Size(176, 17);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Repeat New Password";
+            this.label2.Text = "Repetir Nueva Contraseña";
             // 
             // TxtBoxRepeatNewPass
             // 
@@ -210,9 +210,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Old Password";
+            this.label1.Text = "Contraseña";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // TxtBoxOldPassword
@@ -232,9 +232,9 @@
             this.lblModifyPasswordAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModifyPasswordAdmin.Location = new System.Drawing.Point(16, 164);
             this.lblModifyPasswordAdmin.Name = "lblModifyPasswordAdmin";
-            this.lblModifyPasswordAdmin.Size = new System.Drawing.Size(100, 17);
+            this.lblModifyPasswordAdmin.Size = new System.Drawing.Size(126, 17);
             this.lblModifyPasswordAdmin.TabIndex = 3;
-            this.lblModifyPasswordAdmin.Text = "New Password";
+            this.lblModifyPasswordAdmin.Text = "Nueva Contraseña";
             this.lblModifyPasswordAdmin.Click += new System.EventHandler(this.lblModifyPasswordAdmin_Click);
             // 
             // lblNameAdmin
@@ -243,9 +243,9 @@
             this.lblNameAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameAdmin.Location = new System.Drawing.Point(17, 59);
             this.lblNameAdmin.Name = "lblNameAdmin";
-            this.lblNameAdmin.Size = new System.Drawing.Size(73, 17);
+            this.lblNameAdmin.Size = new System.Drawing.Size(38, 17);
             this.lblNameAdmin.TabIndex = 2;
-            this.lblNameAdmin.Text = "Username";
+            this.lblNameAdmin.Text = "User";
             // 
             // TxtBoxNewPassword
             // 
@@ -270,12 +270,12 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(469, 86);
+            this.btnExit.Location = new System.Drawing.Point(480, 86);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(118, 34);
             this.btnExit.TabIndex = 11;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Salir";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 

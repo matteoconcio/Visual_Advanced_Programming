@@ -53,12 +53,14 @@
             this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnExit = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBicicleta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labeltotal
             // 
             this.labeltotal.AutoSize = true;
-            this.labeltotal.Location = new System.Drawing.Point(1055, 69);
+            this.labeltotal.Location = new System.Drawing.Point(1050, 95);
             this.labeltotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labeltotal.Name = "labeltotal";
             this.labeltotal.Size = new System.Drawing.Size(38, 16);
@@ -68,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1001, 69);
+            this.label3.Location = new System.Drawing.Point(1001, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 16);
@@ -78,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(639, 69);
+            this.label2.Location = new System.Drawing.Point(640, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 16);
@@ -87,7 +89,7 @@
             // 
             // btncarrito
             // 
-            this.btncarrito.Location = new System.Drawing.Point(477, 28);
+            this.btncarrito.Location = new System.Drawing.Point(475, 57);
             this.btncarrito.Margin = new System.Windows.Forms.Padding(4);
             this.btncarrito.Name = "btncarrito";
             this.btncarrito.Size = new System.Drawing.Size(116, 54);
@@ -110,7 +112,7 @@
             "Pedal",
             "Plato",
             "Sillin"});
-            this.cbTipo.Location = new System.Drawing.Point(35, 57);
+            this.cbTipo.Location = new System.Drawing.Point(34, 73);
             this.cbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(160, 24);
@@ -119,7 +121,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 23);
+            this.label1.Location = new System.Drawing.Point(31, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 16);
@@ -168,7 +170,7 @@
             this.columnHeader4,
             this.columnHeader5});
             this.lvcarrito.HideSelection = false;
-            this.lvcarrito.Location = new System.Drawing.Point(643, 98);
+            this.lvcarrito.Location = new System.Drawing.Point(643, 130);
             this.lvcarrito.Margin = new System.Windows.Forms.Padding(4);
             this.lvcarrito.Name = "lvcarrito";
             this.lvcarrito.Size = new System.Drawing.Size(477, 282);
@@ -210,10 +212,10 @@
             this.Cantidad,
             this.Precio});
             this.lvtienda.HideSelection = false;
-            this.lvtienda.Location = new System.Drawing.Point(35, 98);
+            this.lvtienda.Location = new System.Drawing.Point(34, 130);
             this.lvtienda.Margin = new System.Windows.Forms.Padding(4);
             this.lvtienda.Name = "lvtienda";
-            this.lvtienda.Size = new System.Drawing.Size(557, 374);
+            this.lvtienda.Size = new System.Drawing.Size(557, 361);
             this.lvtienda.SmallImageList = this.imageList1;
             this.lvtienda.TabIndex = 12;
             this.lvtienda.UseCompatibleStateImageBehavior = false;
@@ -290,13 +292,34 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(643, 12);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(260, 39);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.Text = "¿Desea comprar una bicicleta completa?\r\nPulsa el botón \"Bicicleta\".";
+            // 
+            // btnBicicleta
+            // 
+            this.btnBicicleta.Location = new System.Drawing.Point(936, 19);
+            this.btnBicicleta.Name = "btnBicicleta";
+            this.btnBicicleta.Size = new System.Drawing.Size(106, 32);
+            this.btnBicicleta.TabIndex = 25;
+            this.btnBicicleta.Text = "Bicicleta";
+            this.btnBicicleta.UseVisualStyleBackColor = true;
+            this.btnBicicleta.Click += new System.EventHandler(this.btnBicicleta_Click);
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PF_CA81492KO_20517869Y.Properties.Resources.background_main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1149, 506);
+            this.ClientSize = new System.Drawing.Size(1149, 504);
+            this.Controls.Add(this.btnBicicleta);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.labeltotal);
             this.Controls.Add(this.label3);
@@ -343,5 +366,7 @@
         private System.Windows.Forms.ColumnHeader Precio;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnBicicleta;
     }
 }

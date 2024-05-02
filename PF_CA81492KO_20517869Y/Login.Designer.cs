@@ -54,18 +54,18 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Location = new System.Drawing.Point(317, 124);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(70, 16);
+            this.lblUser.Size = new System.Drawing.Size(36, 16);
             this.lblUser.TabIndex = 0;
-            this.lblUser.Text = "Username";
+            this.lblUser.Text = "User";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Location = new System.Drawing.Point(320, 176);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(67, 16);
+            this.lblPassword.Size = new System.Drawing.Size(76, 16);
             this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "Password";
+            this.lblPassword.Text = "Contraseña";
             // 
             // lblLogin
             // 
@@ -96,7 +96,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(302, 258);
+            this.btnLogin.Location = new System.Drawing.Point(302, 249);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(109, 29);
@@ -107,12 +107,12 @@
             // 
             // bntRegisterClient
             // 
-            this.bntRegisterClient.Location = new System.Drawing.Point(302, 291);
+            this.bntRegisterClient.Location = new System.Drawing.Point(302, 282);
             this.bntRegisterClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntRegisterClient.Name = "bntRegisterClient";
             this.bntRegisterClient.Size = new System.Drawing.Size(109, 29);
             this.bntRegisterClient.TabIndex = 6;
-            this.bntRegisterClient.Text = "New Client";
+            this.bntRegisterClient.Text = "Nuevo Cliente";
             this.bntRegisterClient.UseVisualStyleBackColor = true;
             this.bntRegisterClient.Click += new System.EventHandler(this.bntRegisterClient_Click);
             // 
@@ -123,7 +123,7 @@
             this.bntExit.Name = "bntExit";
             this.bntExit.Size = new System.Drawing.Size(109, 29);
             this.bntExit.TabIndex = 7;
-            this.bntExit.Text = "Exit";
+            this.bntExit.Text = "Salir";
             this.bntExit.UseVisualStyleBackColor = true;
             this.bntExit.Click += new System.EventHandler(this.bntExit_Click);
             // 
@@ -154,11 +154,11 @@
             // lblUserType
             // 
             this.lblUserType.AutoSize = true;
-            this.lblUserType.Location = new System.Drawing.Point(299, 63);
+            this.lblUserType.Location = new System.Drawing.Point(265, 63);
             this.lblUserType.Name = "lblUserType";
-            this.lblUserType.Size = new System.Drawing.Size(112, 16);
+            this.lblUserType.Size = new System.Drawing.Size(175, 16);
             this.lblUserType.TabIndex = 10;
-            this.lblUserType.Text = "Select User Type";
+            this.lblUserType.Text = "Selecciona Tipo de Usuario";
             // 
             // pFDataSetDiccionario
             // 
@@ -177,11 +177,11 @@
             // btnShowPassword
             // 
             this.btnShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowPassword.Location = new System.Drawing.Point(302, 230);
+            this.btnShowPassword.Location = new System.Drawing.Point(290, 221);
             this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(109, 23);
+            this.btnShowPassword.Size = new System.Drawing.Size(136, 23);
             this.btnShowPassword.TabIndex = 11;
-            this.btnShowPassword.Text = "Show Password";
+            this.btnShowPassword.Text = "Muestra Contraseña";
             this.btnShowPassword.UseVisualStyleBackColor = true;
             this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 

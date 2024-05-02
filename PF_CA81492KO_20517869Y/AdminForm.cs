@@ -334,6 +334,7 @@ namespace PF_CA81492KO_20517869Y
             }
         }
 
+        //buttonSavePart 
         private void bntSavePart_Click(object sender, EventArgs e)
         {
             // Verifica se è stato selezionato un elemento nella ListView
@@ -350,11 +351,11 @@ namespace PF_CA81492KO_20517869Y
                 // Verifica se i valori di quantità e prezzo sono stati forniti
                 if (string.IsNullOrWhiteSpace(newQuantity) || string.IsNullOrWhiteSpace(newPrice))
                 {
-                    MessageBox.Show("Inserisci la quantità e il prezzo.");
+                    MessageBox.Show("Introduzca la cantidad y el precio.");
                     return;
                 }
 
-                // Converte i valori di quantità e prezzo in tipi appropriati (int per quantità, double per prezzo)
+                //declare variables quantity and price
                 int quantity;
                 double price;
 
@@ -397,22 +398,22 @@ namespace PF_CA81492KO_20517869Y
                         {
                             selectedItem.SubItems[3].Text = newQuantity;
                             selectedItem.SubItems[4].Text = newPrice + "€";
-                            MessageBox.Show("Aggiornamento effettuato con successo.");
+                            MessageBox.Show("Actualización realizada con éxito.");
                         }
                         else
                         {
-                            MessageBox.Show("Nessuna riga aggiornata.");
+                            MessageBox.Show("Ninguna línea actualizada.");
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Errore durante l'aggiornamento del record: {ex.Message}");
+                        MessageBox.Show($"Error durante la actualización del registro: {ex.Message}");
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Seleziona un articolo dalla lista.");
+                MessageBox.Show("Seleccionar un artículo de la lista.");
             }
         }
 
