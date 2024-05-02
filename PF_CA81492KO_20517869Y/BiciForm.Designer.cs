@@ -33,18 +33,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btncarrito = new System.Windows.Forms.Button();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
+            this.cbModelo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnfinalizar = new System.Windows.Forms.Button();
             this.btnborrarcarrito = new System.Windows.Forms.Button();
             this.btnborrararticulo = new System.Windows.Forms.Button();
-            this.lvcarrito = new System.Windows.Forms.ListView();
+            this.lvCarritoBicicleta = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lvtienda = new System.Windows.Forms.ListView();
+            this.lvModelo = new System.Windows.Forms.ListView();
             this.Imagen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -102,10 +102,10 @@
             this.btncarrito.Text = "Añadir al carrito";
             this.btncarrito.UseVisualStyleBackColor = true;
             // 
-            // cbTipo
+            // cbModelo
             // 
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Items.AddRange(new object[] {
+            this.cbModelo.FormattingEnabled = true;
+            this.cbModelo.Items.AddRange(new object[] {
             "Cuadro",
             "Cadena",
             "Cierre",
@@ -116,11 +116,11 @@
             "Pedal",
             "Plato",
             "Sillin"});
-            this.cbTipo.Location = new System.Drawing.Point(27, 74);
-            this.cbTipo.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(160, 24);
-            this.cbTipo.TabIndex = 32;
+            this.cbModelo.Location = new System.Drawing.Point(27, 74);
+            this.cbModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.cbModelo.Name = "cbModelo";
+            this.cbModelo.Size = new System.Drawing.Size(160, 24);
+            this.cbModelo.TabIndex = 32;
             // 
             // label1
             // 
@@ -162,22 +162,22 @@
             this.btnborrararticulo.Text = "Borrar artículo";
             this.btnborrararticulo.UseVisualStyleBackColor = true;
             // 
-            // lvcarrito
+            // lvCarritoBicicleta
             // 
-            this.lvcarrito.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvCarritoBicicleta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.lvcarrito.HideSelection = false;
-            this.lvcarrito.Location = new System.Drawing.Point(636, 131);
-            this.lvcarrito.Margin = new System.Windows.Forms.Padding(4);
-            this.lvcarrito.Name = "lvcarrito";
-            this.lvcarrito.Size = new System.Drawing.Size(477, 282);
-            this.lvcarrito.TabIndex = 27;
-            this.lvcarrito.UseCompatibleStateImageBehavior = false;
-            this.lvcarrito.View = System.Windows.Forms.View.Details;
+            this.lvCarritoBicicleta.HideSelection = false;
+            this.lvCarritoBicicleta.Location = new System.Drawing.Point(636, 131);
+            this.lvCarritoBicicleta.Margin = new System.Windows.Forms.Padding(4);
+            this.lvCarritoBicicleta.Name = "lvCarritoBicicleta";
+            this.lvCarritoBicicleta.Size = new System.Drawing.Size(477, 282);
+            this.lvCarritoBicicleta.TabIndex = 27;
+            this.lvCarritoBicicleta.UseCompatibleStateImageBehavior = false;
+            this.lvCarritoBicicleta.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -204,22 +204,22 @@
             this.columnHeader5.Text = "Categoria";
             this.columnHeader5.Width = 74;
             // 
-            // lvtienda
+            // lvModelo
             // 
-            this.lvtienda.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvModelo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Imagen,
             this.ID,
             this.Nombre,
             this.Cantidad,
             this.Precio});
-            this.lvtienda.HideSelection = false;
-            this.lvtienda.Location = new System.Drawing.Point(27, 131);
-            this.lvtienda.Margin = new System.Windows.Forms.Padding(4);
-            this.lvtienda.Name = "lvtienda";
-            this.lvtienda.Size = new System.Drawing.Size(557, 361);
-            this.lvtienda.TabIndex = 26;
-            this.lvtienda.UseCompatibleStateImageBehavior = false;
-            this.lvtienda.View = System.Windows.Forms.View.Details;
+            this.lvModelo.HideSelection = false;
+            this.lvModelo.Location = new System.Drawing.Point(27, 131);
+            this.lvModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.lvModelo.Name = "lvModelo";
+            this.lvModelo.Size = new System.Drawing.Size(557, 361);
+            this.lvModelo.TabIndex = 26;
+            this.lvModelo.UseCompatibleStateImageBehavior = false;
+            this.lvModelo.View = System.Windows.Forms.View.Details;
             // 
             // Imagen
             // 
@@ -258,13 +258,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btncarrito);
-            this.Controls.Add(this.cbTipo);
+            this.Controls.Add(this.cbModelo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnfinalizar);
             this.Controls.Add(this.btnborrarcarrito);
             this.Controls.Add(this.btnborrararticulo);
-            this.Controls.Add(this.lvcarrito);
-            this.Controls.Add(this.lvtienda);
+            this.Controls.Add(this.lvCarritoBicicleta);
+            this.Controls.Add(this.lvModelo);
             this.Name = "BiciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BikeShop.es";
@@ -280,18 +280,18 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btncarrito;
-        private System.Windows.Forms.ComboBox cbTipo;
+        private System.Windows.Forms.ComboBox cbModelo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnfinalizar;
         private System.Windows.Forms.Button btnborrarcarrito;
         private System.Windows.Forms.Button btnborrararticulo;
-        private System.Windows.Forms.ListView lvcarrito;
+        private System.Windows.Forms.ListView lvCarritoBicicleta;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ListView lvtienda;
+        private System.Windows.Forms.ListView lvModelo;
         private System.Windows.Forms.ColumnHeader Imagen;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Nombre;
