@@ -59,8 +59,12 @@ namespace PF_CA81492KO_20517869Y
                 TxtBoxRegisterUser.Clear();
                 TxtBoxRegisterPassword.Clear();
 
+                connection.Close();
+                connection.Open();
+
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex.Message);
             }
@@ -71,7 +75,6 @@ namespace PF_CA81492KO_20517869Y
             }
 
         }
-
 
         private void btnExit_Click(object sender, EventArgs e)
         {
