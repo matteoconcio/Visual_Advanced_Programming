@@ -56,13 +56,13 @@ namespace PF_CA81492KO_20517869Y
                 sqlCommand.Parameters.AddWithValue("password", password);
                 sqlCommand.ExecuteNonQuery();
 
+                //clear txtboxes
                 TxtBoxRegisterUser.Clear();
                 TxtBoxRegisterPassword.Clear();
 
+                //refresh table to permit login with new user
                 connection.Close();
                 connection.Open();
-
-
             }
             catch (Exception ex)
             {
