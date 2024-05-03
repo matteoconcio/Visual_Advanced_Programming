@@ -20,7 +20,7 @@ namespace PF_CA81492KO_20517869Y
             InitializeComponent();
         }
 
-        private SqlConnection connection = new SqlConnection("server=MATTXPS\\SQLEXPRESS;database=master; Integrated Security=SSPI");
+        private SqlConnection connection = new SqlConnection("server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI");
         private void btnRegister_Click(object sender, EventArgs e)
         {
             
@@ -58,6 +58,7 @@ namespace PF_CA81492KO_20517869Y
 
                 TxtBoxRegisterUser.Clear();
                 TxtBoxRegisterPassword.Clear();
+
             }
             catch(Exception ex)
             {
@@ -71,9 +72,24 @@ namespace PF_CA81492KO_20517869Y
 
         }
 
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnShowPassword_Click(object sender, EventArgs e)
+        {
+            bool showPassword = !TxtBoxRegisterPassword.UseSystemPasswordChar;
+            TxtBoxRegisterPassword.UseSystemPasswordChar = showPassword;
+        }
+
+        private void btnShowPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnRegister.PerformClick();
+            }
         }
     }
 }
