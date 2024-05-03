@@ -290,7 +290,7 @@ namespace PF_CA81492KO_20517869Y
         //guardar informacion ventas in tabla Ventas
         private int GuardarVenta(DateTime fechaVenta, string cliente)
         {
-            int ventaID=0;
+            int ventaID = 0;
 
             string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
             string query = "INSERT INTO Ventas (FechaVenta, Cliente) VALUES (@FechaVenta, @Cliente); SELECT SCOPE_IDENTITY();";
@@ -316,6 +316,8 @@ namespace PF_CA81492KO_20517869Y
             }
             return ventaID;
         }
+
+        //DA RISOLVERE
         //guardar detalles ventas in tabla DetallesVenta
         private void GuardarDetalleVenta(int ventaID, string producto, int precio, int cantidad)
         {
