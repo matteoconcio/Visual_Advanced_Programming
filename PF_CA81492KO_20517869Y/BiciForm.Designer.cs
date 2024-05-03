@@ -43,6 +43,8 @@
             this.lvModelo = new System.Windows.Forms.ListView();
             this.nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -88,7 +90,7 @@
             // 
             // btncarrito
             // 
-            this.btncarrito.Location = new System.Drawing.Point(468, 58);
+            this.btncarrito.Location = new System.Drawing.Point(195, 57);
             this.btncarrito.Margin = new System.Windows.Forms.Padding(4);
             this.btncarrito.Name = "btncarrito";
             this.btncarrito.Size = new System.Drawing.Size(116, 54);
@@ -198,6 +200,16 @@
             this.precio.Text = "Precio";
             this.precio.Width = 57;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PF_CA81492KO_20517869Y.Properties.Resources.bikeshopes_high_resolution_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(430, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
+            // 
             // BiciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -205,6 +217,7 @@
             this.BackgroundImage = global::PF_CA81492KO_20517869Y.Properties.Resources.background_main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1149, 504);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.labelTotalBici);
             this.Controls.Add(this.label3);
@@ -219,6 +232,7 @@
             this.Name = "BiciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BikeShop.es";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +255,6 @@
         private System.Windows.Forms.ListView lvModelo;
         private System.Windows.Forms.ColumnHeader nombre;
         private System.Windows.Forms.ColumnHeader precio;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

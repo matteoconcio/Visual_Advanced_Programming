@@ -64,8 +64,10 @@
             this.Precio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblPart = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GBManagement.SuspendLayout();
             this.GBModifyPart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CBManageAdmin
@@ -443,6 +445,16 @@
             this.imageList1.Images.SetKeyName(28, "91.JPG");
             this.imageList1.Images.SetKeyName(29, "92.JPG");
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PF_CA81492KO_20517869Y.Properties.Resources.bikeshopes_high_resolution_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(686, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,6 +462,7 @@
             this.BackgroundImage = global::PF_CA81492KO_20517869Y.Properties.Resources.background_main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(920, 626);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GBModifyPart);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.GBManagement);
@@ -467,6 +480,7 @@
             this.GBManagement.PerformLayout();
             this.GBModifyPart.ResumeLayout(false);
             this.GBModifyPart.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,6 +521,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

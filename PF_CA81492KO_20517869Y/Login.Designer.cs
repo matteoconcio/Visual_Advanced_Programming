@@ -37,7 +37,6 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.bntRegisterClient = new System.Windows.Forms.Button();
             this.bntExit = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CbUserType = new System.Windows.Forms.ComboBox();
             this.lblUserType = new System.Windows.Forms.Label();
             this.pFDataSetDiccionario = new PF_CA81492KO_20517869Y.PFDataSetDiccionario();
@@ -45,10 +44,11 @@
             this.adminsTableAdapter = new PF_CA81492KO_20517869Y.PFDataSetDiccionarioTableAdapters.AdminsTableAdapter();
             this.btnShowPassword = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pFDataSetDiccionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUser
@@ -130,17 +130,6 @@
             this.bntExit.UseVisualStyleBackColor = true;
             this.bntExit.Click += new System.EventHandler(this.bntExit_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PF_CA81492KO_20517869Y.Properties.Resources.login_image;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(263, 420);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // CbUserType
             // 
             this.CbUserType.FormattingEnabled = true;
@@ -190,13 +179,24 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::PF_CA81492KO_20517869Y.Properties.Resources.bikeshopes_high_resolution_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(302, 12);
+            this.pictureBox2.Image = global::PF_CA81492KO_20517869Y.Properties.Resources.bikeshopes_high_resolution_logo1;
+            this.pictureBox2.Location = new System.Drawing.Point(317, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 58);
+            this.pictureBox2.Size = new System.Drawing.Size(94, 58);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PF_CA81492KO_20517869Y.Properties.Resources.login_image;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(263, 420);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -221,10 +221,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pFDataSetDiccionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -55,6 +55,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBicicleta = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labeltotal
@@ -89,7 +91,7 @@
             // 
             // btncarrito
             // 
-            this.btncarrito.Location = new System.Drawing.Point(475, 57);
+            this.btncarrito.Location = new System.Drawing.Point(202, 57);
             this.btncarrito.Margin = new System.Windows.Forms.Padding(4);
             this.btncarrito.Name = "btncarrito";
             this.btncarrito.Size = new System.Drawing.Size(116, 54);
@@ -121,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 44);
+            this.label1.Location = new System.Drawing.Point(31, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 16);
@@ -297,6 +299,7 @@
             this.textBox1.Location = new System.Drawing.Point(643, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(260, 39);
             this.textBox1.TabIndex = 24;
             this.textBox1.Text = "¿Desea comprar una bicicleta completa?\r\nPulsa el botón \"Bicicleta\".";
@@ -311,6 +314,16 @@
             this.btnBicicleta.UseVisualStyleBackColor = true;
             this.btnBicicleta.Click += new System.EventHandler(this.btnBicicleta_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PF_CA81492KO_20517869Y.Properties.Resources.bikeshopes_high_resolution_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(430, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,6 +331,7 @@
             this.BackgroundImage = global::PF_CA81492KO_20517869Y.Properties.Resources.background_main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1149, 504);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBicicleta);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnExit);
@@ -336,6 +350,7 @@
             this.Name = "ClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BikeShop.es";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,5 +383,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnBicicleta;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
