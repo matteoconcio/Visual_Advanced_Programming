@@ -44,15 +44,17 @@
             this.adminsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminsTableAdapter = new PF_CA81492KO_20517869Y.PFDataSetDiccionarioTableAdapters.AdminsTableAdapter();
             this.btnShowPassword = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pFDataSetDiccionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(317, 124);
+            this.lblUser.Location = new System.Drawing.Point(317, 159);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(36, 16);
             this.lblUser.TabIndex = 0;
@@ -61,7 +63,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(320, 176);
+            this.lblPassword.Location = new System.Drawing.Point(320, 211);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(76, 16);
             this.lblPassword.TabIndex = 1;
@@ -71,7 +73,7 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(318, 9);
+            this.lblLogin.Location = new System.Drawing.Point(318, 73);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(73, 25);
             this.lblLogin.TabIndex = 2;
@@ -79,7 +81,7 @@
             // 
             // TxtBoxUser
             // 
-            this.TxtBoxUser.Location = new System.Drawing.Point(302, 142);
+            this.TxtBoxUser.Location = new System.Drawing.Point(302, 177);
             this.TxtBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxUser.Name = "TxtBoxUser";
             this.TxtBoxUser.Size = new System.Drawing.Size(109, 22);
@@ -87,7 +89,7 @@
             // 
             // TxtBoxPassword
             // 
-            this.TxtBoxPassword.Location = new System.Drawing.Point(302, 194);
+            this.TxtBoxPassword.Location = new System.Drawing.Point(302, 229);
             this.TxtBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxPassword.Name = "TxtBoxPassword";
             this.TxtBoxPassword.Size = new System.Drawing.Size(109, 22);
@@ -97,7 +99,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(302, 249);
+            this.btnLogin.Location = new System.Drawing.Point(302, 284);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(109, 29);
@@ -108,7 +110,7 @@
             // 
             // bntRegisterClient
             // 
-            this.bntRegisterClient.Location = new System.Drawing.Point(302, 282);
+            this.bntRegisterClient.Location = new System.Drawing.Point(302, 317);
             this.bntRegisterClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntRegisterClient.Name = "bntRegisterClient";
             this.bntRegisterClient.Size = new System.Drawing.Size(109, 29);
@@ -145,7 +147,7 @@
             this.CbUserType.Items.AddRange(new object[] {
             "Admin",
             "Client"});
-            this.CbUserType.Location = new System.Drawing.Point(302, 81);
+            this.CbUserType.Location = new System.Drawing.Point(302, 116);
             this.CbUserType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbUserType.Name = "CbUserType";
             this.CbUserType.Size = new System.Drawing.Size(109, 24);
@@ -155,7 +157,7 @@
             // lblUserType
             // 
             this.lblUserType.AutoSize = true;
-            this.lblUserType.Location = new System.Drawing.Point(265, 63);
+            this.lblUserType.Location = new System.Drawing.Point(265, 98);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(175, 16);
             this.lblUserType.TabIndex = 10;
@@ -178,7 +180,7 @@
             // btnShowPassword
             // 
             this.btnShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowPassword.Location = new System.Drawing.Point(290, 221);
+            this.btnShowPassword.Location = new System.Drawing.Point(290, 256);
             this.btnShowPassword.Name = "btnShowPassword";
             this.btnShowPassword.Size = new System.Drawing.Size(136, 23);
             this.btnShowPassword.TabIndex = 11;
@@ -186,11 +188,22 @@
             this.btnShowPassword.UseVisualStyleBackColor = true;
             this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PF_CA81492KO_20517869Y.Properties.Resources.bikeshopes_high_resolution_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(302, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 58);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 394);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnShowPassword);
             this.Controls.Add(this.lblUserType);
             this.Controls.Add(this.CbUserType);
@@ -211,6 +224,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pFDataSetDiccionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +247,6 @@
         private PFDataSetDiccionarioTableAdapters.AdminsTableAdapter adminsTableAdapter;
         public System.Windows.Forms.ComboBox CbUserType;
         private System.Windows.Forms.Button btnShowPassword;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
