@@ -320,21 +320,20 @@ namespace PF_CA81492KO_20517869Y
         private void GuardarDetalleVenta(int ventaID, string producto, int precio, int cantidad)
         {
             string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
-            string query = "INSERT INTO DetallesVenta (VentaID, Producto, Precio, Cantidad) VALUES (@VentaID, @Producto, @Precio, @Cantidad);";
+            string query = "INSERT INTO DetallesVenta VALUES (@VentaID, @Producto, @Precio, @Cantidad);";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    //parametros
-                    command.Parameters.AddWithValue("@VentaID", ventaID);
-                    command.Parameters.AddWithValue("@Producto", producto);
-                    command.Parameters.AddWithValue("@Precio", precio);
-                    command.Parameters.AddWithValue("@Cantidad", cantidad);
-
                     try
                     {
                         connection.Open();
+                        //parametros
+                        command.Parameters.AddWithValue("@VentaID", ventaID);
+                        command.Parameters.AddWithValue("@Producto", producto);
+                        command.Parameters.AddWithValue("@Precio", precio);
+                        command.Parameters.AddWithValue("@Cantidad", cantidad);
                         command.ExecuteNonQuery();
                     }
                     catch (Exception ex)

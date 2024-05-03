@@ -82,8 +82,8 @@ namespace PF_CA81492KO_20517869Y
 
             string tableName = (userType == "Client") ? "Clients" : "Admins";
             string queryDB = $"SELECT Password FROM {tableName} WHERE Username = @Username";
-
-            using (SqlConnection connection = ConexionBD.Conexion)
+            string connectionLogin = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
+            using (SqlConnection connection = new SqlConnection(connectionLogin))
             using (SqlCommand sqlCommand = new SqlCommand(queryDB, connection))
             {
                 sqlCommand.Parameters.AddWithValue("@Username", username);
