@@ -322,29 +322,39 @@ namespace PF_CA81492KO_20517869Y
         private void GuardarDetalleVenta(int ventaID, string producto, int precio, int cantidad)
         {
             string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
-            string query = "INSERT INTO DetallesVenta VALUES (@VentaID, @Producto, @Precio, @Cantidad);";
+            string query = "INSERT INTO DetalleVentas (VentaID, Producto, Precio, Cantidad) VALUES (@VentaID, @Producto, @Precio, @Cantidad); SELECT SCOPE_IDENTITY();";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
             {
-                using (SqlCommand command = new SqlCommand(query, connection))
+                try
                 {
-                    try
+                    connection.Open();
+                    command.Parameters.AddWithValue("@VentaID", ventaID);
+                    command.Parameters.AddWithValue("@Producto", producto);
+                    command.Parameters.AddWithValue("@Precio", precio);
+                    command.Parameters.AddWithValue("@Cantidad", cantidad);
+
+                    //get and insert ID
+                    int insertedID = Convert.ToInt32(command.ExecuteScalar());
+
+                    // Check if the inserted ID is greater than 0, indicating success
+                    if (insertedID > 0)
                     {
-                        connection.Open();
-                        //parametros
-                        command.Parameters.AddWithValue("@VentaID", ventaID);
-                        command.Parameters.AddWithValue("@Producto", producto);
-                        command.Parameters.AddWithValue("@Precio", precio);
-                        command.Parameters.AddWithValue("@Cantidad", cantidad);
-                        command.ExecuteNonQuery();
+                        Console.WriteLine("Detalle de venta guardado con éxito. ID: " + insertedID);
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Console.WriteLine("Error al guardar los detalles de la venta: " + ex.Message);
+                        Console.WriteLine("No se pudo guardar el detalle de la venta.");
                     }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al guardar el detalle de la venta: " + ex.Message);
                 }
             }
         }
+
 
     }
 }
