@@ -274,8 +274,13 @@ namespace PF_CA81492KO_20517869Y
             //obtener el cliente (podrías obtenerlo de algún control en tu formulario)
             string cliente = username;
 
+            DateTime fechaVenta = DateTime.Now;
+            int ventaID = GuardarVenta(fechaVenta, cliente);
+            
+
             //print client in worksheet
             worksheet.Cells[row + 4, 4] = "Cliente: " + username.ToString();
+            worksheet.Cells[row + 5, 4] = "ID Venta: " + Convert.ToString(ventaID);
             // Mensaje de agradecimiento
             worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
             worksheet.Cells[row + 5, 1] = "BikeShop.es";
@@ -297,13 +302,6 @@ namespace PF_CA81492KO_20517869Y
             // Mostrar mensaje de confirmación
             MessageBox.Show("Factura generada correctamente en la carpeta de facturas.", "Factura Generada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //poner la venta en la Tabla SQL
-            DateTime fechaVenta = DateTime.Now;
-
-
-            //guardar la información de la venta en la tabla Ventas
-            int ventaID = GuardarVenta(fechaVenta, cliente);
-
             //configurar por guardar detalles de venta en tabla DetalleVentas
             foreach (ListViewItem item in lvcarrito.Items)
             {
@@ -316,10 +314,10 @@ namespace PF_CA81492KO_20517869Y
         }
 
         //guardar informacion ventas in tabla Ventas
+        
         private int GuardarVenta(DateTime fechaVenta, string cliente)
         {
             int ventaID = 0;
-
             string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
             string query = "INSERT INTO Ventas (FechaVenta, Cliente) VALUES (@FechaVenta, @Cliente); SELECT SCOPE_IDENTITY();";
 
