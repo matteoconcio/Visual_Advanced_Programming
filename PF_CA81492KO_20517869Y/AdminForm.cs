@@ -322,9 +322,9 @@ namespace PF_CA81492KO_20517869Y
                 ListViewItem selectedItem = lvtienda.SelectedItems[0];
 
                 // Populate the textboxes with the corresponding values
-                TxtBoxManagePart.Text = selectedItem.SubItems[2].Text; // Assuming the name is in the third column (index 2)
-                TxtBoxQuantity.Text = selectedItem.SubItems[3].Text; // Assuming the quantity is in the fourth column (index 3)
-                TxtBoxPrice.Text = selectedItem.SubItems[4].Text; // Assuming the price is in the fifth column (index 4)
+                TxtBoxManagePart.Text = selectedItem.SubItems[1].Text; // Assuming the name is in the third column (index 2)
+                TxtBoxQuantity.Text = selectedItem.SubItems[2].Text; // Assuming the quantity is in the fourth column (index 3)
+                TxtBoxPrice.Text = selectedItem.SubItems[3].Text; // Assuming the price is in the fifth column (index 4)
             }
             else
             {
@@ -343,7 +343,7 @@ namespace PF_CA81492KO_20517869Y
             {
                 ListViewItem selectedItem = lvtienda.SelectedItems[0];
                 // Ottieni l'ID dell'articolo selezionato
-                string id = lvtienda.SelectedItems[0].SubItems[1].Text; // Assumendo che l'ID sia nella seconda colonna
+                string id = lvtienda.SelectedItems[0].SubItems[0].Text; // Assumendo che l'ID sia nella seconda colonna
 
                 // Ottieni i nuovi valori di quantità e prezzo dai TextBox
                 string newQuantity = TxtBoxQuantity.Text;
@@ -397,8 +397,8 @@ namespace PF_CA81492KO_20517869Y
                         // Verifica se l'aggiornamento è stato eseguito con successo
                         if (rowsAffected > 0)
                         {
-                            selectedItem.SubItems[3].Text = newQuantity;
-                            selectedItem.SubItems[4].Text = newPrice + "€";
+                            selectedItem.SubItems[2].Text = newQuantity;
+                            selectedItem.SubItems[3].Text = newPrice + "€";
                             MessageBox.Show("Actualización realizada con éxito.");
                         }
                         else
