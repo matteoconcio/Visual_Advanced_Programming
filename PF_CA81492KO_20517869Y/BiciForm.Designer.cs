@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BiciForm));
             this.btnExit = new System.Windows.Forms.Button();
             this.labelTotalBici = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -230,6 +231,7 @@
             this.Controls.Add(this.lvCarritoBicicleta);
             this.Controls.Add(this.lvModelo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BiciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BikeShop.es";
