@@ -186,17 +186,17 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Nombre";
-            this.columnHeader2.Width = 90;
+            this.columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Cantidad";
-            this.columnHeader3.Width = 76;
+            this.columnHeader3.Width = 150;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Precio";
-            this.columnHeader4.Width = 73;
+            this.columnHeader4.Width = 120;
             // 
             // lvtienda
             // 
@@ -338,6 +338,7 @@
             this.Controls.Add(this.btnborrararticulo);
             this.Controls.Add(this.lvcarrito);
             this.Controls.Add(this.lvtienda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

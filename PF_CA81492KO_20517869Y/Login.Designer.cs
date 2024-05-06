@@ -54,7 +54,7 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(317, 159);
+            this.lblUser.Location = new System.Drawing.Point(317, 169);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(36, 16);
             this.lblUser.TabIndex = 0;
@@ -81,7 +81,7 @@
             // 
             // TxtBoxUser
             // 
-            this.TxtBoxUser.Location = new System.Drawing.Point(302, 177);
+            this.TxtBoxUser.Location = new System.Drawing.Point(302, 187);
             this.TxtBoxUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxUser.Name = "TxtBoxUser";
             this.TxtBoxUser.Size = new System.Drawing.Size(109, 22);
@@ -136,7 +136,7 @@
             this.CbUserType.Items.AddRange(new object[] {
             "Admin",
             "Client"});
-            this.CbUserType.Location = new System.Drawing.Point(302, 116);
+            this.CbUserType.Location = new System.Drawing.Point(302, 127);
             this.CbUserType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbUserType.Name = "CbUserType";
             this.CbUserType.Size = new System.Drawing.Size(109, 24);
@@ -146,7 +146,7 @@
             // lblUserType
             // 
             this.lblUserType.AutoSize = true;
-            this.lblUserType.Location = new System.Drawing.Point(265, 98);
+            this.lblUserType.Location = new System.Drawing.Point(265, 109);
             this.lblUserType.Name = "lblUserType";
             this.lblUserType.Size = new System.Drawing.Size(175, 16);
             this.lblUserType.TabIndex = 10;
@@ -216,6 +216,7 @@
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

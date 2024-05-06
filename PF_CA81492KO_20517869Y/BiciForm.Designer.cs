@@ -169,7 +169,7 @@
             // columnPiezoBiciNombre
             // 
             this.columnPiezoBiciNombre.Text = "Nombre";
-            this.columnPiezoBiciNombre.Width = 90;
+            this.columnPiezoBiciNombre.Width = 150;
             // 
             // ColumnPiezoBiciPrecio
             // 
@@ -193,7 +193,7 @@
             // nombre
             // 
             this.nombre.Text = "Nombre";
-            this.nombre.Width = 103;
+            this.nombre.Width = 150;
             // 
             // precio
             // 
@@ -229,6 +229,7 @@
             this.Controls.Add(this.btnborrarcarrito);
             this.Controls.Add(this.lvCarritoBicicleta);
             this.Controls.Add(this.lvModelo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BiciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BikeShop.es";

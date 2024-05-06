@@ -165,7 +165,7 @@
             // btnSaveAdmin
             // 
             this.btnSaveAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAdmin.Location = new System.Drawing.Point(20, 339);
+            this.btnSaveAdmin.Location = new System.Drawing.Point(20, 361);
             this.btnSaveAdmin.Name = "btnSaveAdmin";
             this.btnSaveAdmin.Size = new System.Drawing.Size(146, 31);
             this.btnSaveAdmin.TabIndex = 9;
@@ -176,7 +176,7 @@
             // btnShowPassword
             // 
             this.btnShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowPassword.Location = new System.Drawing.Point(19, 288);
+            this.btnShowPassword.Location = new System.Drawing.Point(20, 310);
             this.btnShowPassword.Name = "btnShowPassword";
             this.btnShowPassword.Size = new System.Drawing.Size(147, 35);
             this.btnShowPassword.TabIndex = 8;
@@ -188,7 +188,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 241);
+            this.label2.Location = new System.Drawing.Point(9, 233);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 17);
             this.label2.TabIndex = 7;
@@ -209,7 +209,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 111);
+            this.label1.Location = new System.Drawing.Point(15, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 5;
@@ -219,7 +219,7 @@
             // TxtBoxOldPassword
             // 
             this.TxtBoxOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBoxOldPassword.Location = new System.Drawing.Point(20, 130);
+            this.TxtBoxOldPassword.Location = new System.Drawing.Point(19, 129);
             this.TxtBoxOldPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxOldPassword.Name = "TxtBoxOldPassword";
             this.TxtBoxOldPassword.Size = new System.Drawing.Size(146, 23);
@@ -231,7 +231,7 @@
             // 
             this.lblModifyPasswordAdmin.AutoSize = true;
             this.lblModifyPasswordAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModifyPasswordAdmin.Location = new System.Drawing.Point(16, 164);
+            this.lblModifyPasswordAdmin.Location = new System.Drawing.Point(16, 171);
             this.lblModifyPasswordAdmin.Name = "lblModifyPasswordAdmin";
             this.lblModifyPasswordAdmin.Size = new System.Drawing.Size(126, 17);
             this.lblModifyPasswordAdmin.TabIndex = 3;
@@ -242,7 +242,7 @@
             // 
             this.lblNameAdmin.AutoSize = true;
             this.lblNameAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameAdmin.Location = new System.Drawing.Point(17, 59);
+            this.lblNameAdmin.Location = new System.Drawing.Point(16, 53);
             this.lblNameAdmin.Name = "lblNameAdmin";
             this.lblNameAdmin.Size = new System.Drawing.Size(38, 17);
             this.lblNameAdmin.TabIndex = 2;
@@ -251,7 +251,7 @@
             // TxtBoxNewPassword
             // 
             this.TxtBoxNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBoxNewPassword.Location = new System.Drawing.Point(20, 183);
+            this.TxtBoxNewPassword.Location = new System.Drawing.Point(19, 190);
             this.TxtBoxNewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxNewPassword.Name = "TxtBoxNewPassword";
             this.TxtBoxNewPassword.Size = new System.Drawing.Size(146, 23);
@@ -262,7 +262,7 @@
             // TxtBoxNombreAdmin
             // 
             this.TxtBoxNombreAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBoxNombreAdmin.Location = new System.Drawing.Point(20, 78);
+            this.TxtBoxNombreAdmin.Location = new System.Drawing.Point(19, 72);
             this.TxtBoxNombreAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxNombreAdmin.Name = "TxtBoxNombreAdmin";
             this.TxtBoxNombreAdmin.Size = new System.Drawing.Size(146, 23);
@@ -302,7 +302,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 329);
+            this.label5.Location = new System.Drawing.Point(79, 342);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 20;
@@ -311,7 +311,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 277);
+            this.label4.Location = new System.Drawing.Point(79, 291);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 19;
@@ -328,14 +328,14 @@
             // 
             // TxtBoxPrice
             // 
-            this.TxtBoxPrice.Location = new System.Drawing.Point(82, 348);
+            this.TxtBoxPrice.Location = new System.Drawing.Point(82, 361);
             this.TxtBoxPrice.Name = "TxtBoxPrice";
             this.TxtBoxPrice.Size = new System.Drawing.Size(53, 22);
             this.TxtBoxPrice.TabIndex = 17;
             // 
             // TxtBoxQuantity
             // 
-            this.TxtBoxQuantity.Location = new System.Drawing.Point(82, 296);
+            this.TxtBoxQuantity.Location = new System.Drawing.Point(82, 310);
             this.TxtBoxQuantity.Name = "TxtBoxQuantity";
             this.TxtBoxQuantity.Size = new System.Drawing.Size(53, 22);
             this.TxtBoxQuantity.TabIndex = 16;
@@ -350,9 +350,9 @@
             // 
             // bntSavePart
             // 
-            this.bntSavePart.Location = new System.Drawing.Point(393, 333);
+            this.bntSavePart.Location = new System.Drawing.Point(386, 338);
             this.bntSavePart.Name = "bntSavePart";
-            this.bntSavePart.Size = new System.Drawing.Size(92, 37);
+            this.bntSavePart.Size = new System.Drawing.Size(110, 45);
             this.bntSavePart.TabIndex = 14;
             this.bntSavePart.Text = "Guardar";
             this.bntSavePart.UseVisualStyleBackColor = true;
@@ -465,6 +465,7 @@
             this.Controls.Add(this.lblManagePart);
             this.Controls.Add(this.CBManageAdmin);
             this.Controls.Add(this.lblManageAdmin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

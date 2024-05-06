@@ -85,10 +85,10 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(68, 184);
+            this.btnRegister.Location = new System.Drawing.Point(68, 204);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(136, 26);
+            this.btnRegister.Size = new System.Drawing.Size(136, 38);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Registrar";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(68, 214);
+            this.btnExit.Location = new System.Drawing.Point(68, 259);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(136, 26);
@@ -108,9 +108,9 @@
             // btnShowPassword
             // 
             this.btnShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowPassword.Location = new System.Drawing.Point(68, 153);
+            this.btnShowPassword.Location = new System.Drawing.Point(68, 162);
             this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(136, 26);
+            this.btnShowPassword.Size = new System.Drawing.Size(136, 28);
             this.btnShowPassword.TabIndex = 12;
             this.btnShowPassword.Text = "Muestra Contraseña";
             this.btnShowPassword.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 296);
+            this.ClientSize = new System.Drawing.Size(288, 315);
             this.Controls.Add(this.btnShowPassword);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRegister);
@@ -130,6 +130,7 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblRegistar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RegisterClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
