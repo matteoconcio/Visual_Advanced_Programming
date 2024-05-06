@@ -286,7 +286,7 @@ namespace PF_CA81492KO_20517869Y
                 int cantidad = int.Parse(item.SubItems[2].ToString()); //cantidad
 
                 //guardar el detalle de la venta en la tabla DetalleVentas
-                GuardarDetalleVenta(ventaID, producto, precio, cantidad);
+                //GuardarDetalleVenta(ventaID, producto, precio, cantidad);
             }
         }
 
@@ -320,8 +320,9 @@ namespace PF_CA81492KO_20517869Y
             return ventaID;
         }
 
-        //DA RISOLVERE
+        
         //guardar detalles ventas in tabla DetallesVenta
+        /*
         private void GuardarDetalleVenta(int ventaID, string producto, int precio, int cantidad)
         {
             string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
@@ -357,7 +358,6 @@ namespace PF_CA81492KO_20517869Y
                 }
             }
         }
-
-
+        */
     }
 }
