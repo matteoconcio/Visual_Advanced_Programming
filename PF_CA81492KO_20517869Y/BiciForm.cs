@@ -253,8 +253,18 @@ namespace PF_CA81492KO_20517869Y
             worksheet.Cells[row + 2, 3] = "Hora:";
             worksheet.Cells[row + 2, 4] = DateTime.Now.ToShortTimeString();
 
+            //poner la venta en la Tabla SQL
+            DateTime fechaVenta = DateTime.Now;
+
+            //obtener el cliente (podrías obtenerlo de algún control en tu formulario)
+            string cliente = username;
+
+            //guardar la información de la venta en la tabla Ventas
+            int ventaID = GuardarVenta(fechaVenta, cliente);
+
             //print client in worksheet
             worksheet.Cells[row + 4, 4] = "Cliente: " + username.ToString();
+            worksheet.Cells[row + 5, 4] = "ID Venta: " + Convert.ToString(ventaID);
             //mensaje de agradecimiento
             worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
             worksheet.Cells[row + 5, 1] = "BikeShop.es";
@@ -269,14 +279,6 @@ namespace PF_CA81492KO_20517869Y
             string filePath = System.IO.Path.Combine(facturasPath, $"Factura_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.xlsx");
             workbook.SaveAs(filePath);
 
-            //poner la venta en la Tabla SQL
-            DateTime fechaVenta = DateTime.Now;
-
-            //obtener el cliente (podrías obtenerlo de algún control en tu formulario)
-            string cliente = username;
-
-            //guardar la información de la venta en la tabla Ventas
-            int ventaID = GuardarVenta(fechaVenta, cliente);
 
             //guardar los detalles de la venta en la tabla DetalleVentas
             foreach (ListViewItem item in lvCarritoBicicleta.Items)
