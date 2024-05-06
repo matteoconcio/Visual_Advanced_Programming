@@ -260,11 +260,12 @@ namespace PF_CA81492KO_20517869Y
             string cliente = username;
 
             //guardar la información de la venta en la tabla Ventas
-            int ventaID = GuardarVenta(fechaVenta, cliente);
+            decimal ventaID = GuardarVenta(fechaVenta, cliente);
 
             //print client in worksheet
             worksheet.Cells[row + 4, 4] = "Cliente: " + username.ToString();
             worksheet.Cells[row + 5, 4] = "ID Venta: " + Convert.ToString(ventaID);
+
             //mensaje de agradecimiento
             worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
             worksheet.Cells[row + 5, 1] = "BikeShop.es";
@@ -279,12 +280,12 @@ namespace PF_CA81492KO_20517869Y
             string filePath = System.IO.Path.Combine(facturasPath, $"Factura_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.xlsx");
             workbook.SaveAs(filePath);
 
-
+            decimal outprecio = 0;
             //guardar los detalles de la venta en la tabla DetalleVentas
             foreach (ListViewItem item in lvCarritoBicicleta.Items)
             {
                 string producto = item.SubItems[0].Text; //nombre
-                int precio = int.Parse(item.SubItems[1].ToString()); //precio
+                decimal precio = decimal.Parse(item.SubItems[1].Text); //precio
                 int cantidad = int.Parse(item.SubItems[2].ToString()); //cantidad
 
                 //guardar el detalle de la venta en la tabla DetalleVentas
@@ -293,9 +294,9 @@ namespace PF_CA81492KO_20517869Y
         }
 
         //guardar informacion ventas in tabla Ventas
-        private int GuardarVenta(DateTime fechaVenta, string cliente)
+        private decimal GuardarVenta(DateTime fechaVenta, string cliente)
         {
-            int ventaID = 0;
+            decimal ventaID = 0;
 
             string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
             string query = "INSERT INTO Ventas (FechaVenta, Cliente) VALUES (@FechaVenta, @Cliente); SELECT SCOPE_IDENTITY();";
@@ -311,7 +312,7 @@ namespace PF_CA81492KO_20517869Y
                     try
                     {
                         connection.Open();
-                        ventaID = Convert.ToInt32(command.ExecuteScalar());
+                        ventaID = Convert.ToDecimal(command.ExecuteScalar());
                     }
                     catch (Exception ex)
                     {
