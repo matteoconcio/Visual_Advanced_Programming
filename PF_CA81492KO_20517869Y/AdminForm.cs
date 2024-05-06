@@ -261,21 +261,9 @@ namespace PF_CA81492KO_20517869Y
                         string unidades = reader["Unidades"].ToString();
                         string precio = reader["Precio"].ToString() + "€";
 
-                        // Cargar la imagen desde el archivo JPG en la carpeta imagenes
-                        string imagePath = $"imagenes/{id}.jpg"; // Ruta de la imagen
-                        string imageName = File.Exists(imagePath) ? id + ".jpg" : ""; // Nombre de la imagen o cadena vacía si no existe
-
-                        // Agregar la imagen al ImageList si existe
-                        if (File.Exists(imagePath))
-                        {
-                            imageList1.Images.Add(id, Image.FromFile(imagePath));
-                        }
-
                         // Crear una nueva fila para el ListView
-                        ListViewItem item = new ListViewItem();
-                        item.ImageKey = id; // Establecer el índice de imagen
-
-                        item.SubItems.Add(id);
+                        ListViewItem item = new ListViewItem(id);
+                        
                         item.SubItems.Add(nombre);
                         item.SubItems.Add(unidades);
                         item.SubItems.Add(precio);

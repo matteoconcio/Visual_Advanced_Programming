@@ -57,7 +57,6 @@
             this.TxtBoxManagePart = new System.Windows.Forms.TextBox();
             this.bntSavePart = new System.Windows.Forms.Button();
             this.lvtienda = new System.Windows.Forms.ListView();
-            this.Imagen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -362,7 +361,6 @@
             // lvtienda
             // 
             this.lvtienda.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Imagen,
             this.ID,
             this.Nombre,
             this.Cantidad,
@@ -376,11 +374,6 @@
             this.lvtienda.UseCompatibleStateImageBehavior = false;
             this.lvtienda.View = System.Windows.Forms.View.Details;
             this.lvtienda.SelectedIndexChanged += new System.EventHandler(this.lvtienda_SelectedIndexChanged);
-            // 
-            // Imagen
-            // 
-            this.Imagen.Text = "Imagen";
-            this.Imagen.Width = 106;
             // 
             // ID
             // 
@@ -507,7 +500,6 @@
         private System.Windows.Forms.Button btnSaveAdmin;
         private System.Windows.Forms.GroupBox GBModifyPart;
         private System.Windows.Forms.Label lblPart;
-        private System.Windows.Forms.ColumnHeader Imagen;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader Cantidad;

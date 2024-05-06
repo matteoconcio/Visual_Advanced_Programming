@@ -245,7 +245,7 @@ namespace PF_CA81492KO_20517869Y
 
             //precio total
             worksheet.Cells[row, 3] = "Precio Total:";
-            worksheet.Cells[row, 4] = labelTotalBici.Text;
+            worksheet.Cells[row, 4] = labelTotalBici.Text + "€";
 
             //fecha y hora
             worksheet.Cells[row + 1, 3] = "Fecha:";
@@ -280,17 +280,7 @@ namespace PF_CA81492KO_20517869Y
             string filePath = System.IO.Path.Combine(facturasPath, $"Factura_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.xlsx");
             workbook.SaveAs(filePath);
 
-            decimal outprecio = 0;
-            //guardar los detalles de la venta en la tabla DetalleVentas
-            foreach (ListViewItem item in lvCarritoBicicleta.Items)
-            {
-                string producto = item.SubItems[0].Text; //nombre
-                decimal precio = decimal.Parse(item.SubItems[1].Text); //precio
-                int cantidad = int.Parse(item.SubItems[2].ToString()); //cantidad
-
-                //guardar el detalle de la venta en la tabla DetalleVentas
-                //GuardarDetalleVenta(ventaID, producto, precio, cantidad);
-            }
+           
         }
 
         //guardar informacion ventas in tabla Ventas
@@ -322,45 +312,5 @@ namespace PF_CA81492KO_20517869Y
             }
             return ventaID;
         }
-
-        
-        //guardar detalles ventas in tabla DetallesVenta
-        /*
-        private void GuardarDetalleVenta(int ventaID, string producto, int precio, int cantidad)
-        {
-            string connectionString = "server=MATTASUS\\SQLEXPRESS;database=master; Trusted_Connection=True; Integrated Security=SSPI";
-            string query = "INSERT INTO DetalleVentas (VentaID, Producto, Precio, Cantidad) VALUES (@VentaID, @Producto, @Precio, @Cantidad); SELECT SCOPE_IDENTITY();";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand(query, connection))
-            {
-                try
-                {
-                    connection.Open();
-                    command.Parameters.AddWithValue("@VentaID", ventaID);
-                    command.Parameters.AddWithValue("@Producto", producto);
-                    command.Parameters.AddWithValue("@Precio", precio);
-                    command.Parameters.AddWithValue("@Cantidad", cantidad);
-
-                    //get and insert ID
-                    int insertedID = Convert.ToInt32(command.ExecuteScalar());
-
-                    // Check if the inserted ID is greater than 0, indicating success
-                    if (insertedID > 0)
-                    {
-                        Console.WriteLine("Detalle de venta guardado con éxito. ID: " + insertedID);
-                    }
-                    else
-                    {
-                        Console.WriteLine("No se pudo guardar el detalle de la venta.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error al guardar el detalle de la venta: " + ex.Message);
-                }
-            }
-        }
-        */
     }
 }
