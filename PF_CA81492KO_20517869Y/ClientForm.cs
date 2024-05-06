@@ -165,6 +165,7 @@ namespace PF_CA81492KO_20517869Y
                 newItem.SubItems.Add(nombre); // Nombre
                 newItem.SubItems.Add("1"); // Cantidad
                 newItem.SubItems.Add(precio + "€"); // Precio
+                
 
                 // Agregar el nuevo elemento a lvCarrito
                 lvcarrito.Items.Add(newItem);
@@ -271,6 +272,7 @@ namespace PF_CA81492KO_20517869Y
 
             // Mensaje de agradecimiento
             worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
+            worksheet.Cells[row + 5, 1] = "BikeShop.es";
 
             // Guardar el libro de Excel en la carpeta del proyecto
             string projectPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath);

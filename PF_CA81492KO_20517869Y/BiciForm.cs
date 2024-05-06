@@ -255,6 +255,7 @@ namespace PF_CA81492KO_20517869Y
 
             //mensaje de agradecimiento
             worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
+            worksheet.Cells[row + 5, 1] = "BikeShop.es";
 
             //guardar el libro de Excel en la carpeta del proyecto
             string projectPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
