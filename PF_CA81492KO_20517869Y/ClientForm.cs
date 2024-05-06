@@ -233,6 +233,7 @@ namespace PF_CA81492KO_20517869Y
             labeltotal.Text = "0.00€";
         }
 
+        string username = GlobalVariables.Username;
         private void btnfinalizar_Click(object sender, EventArgs e)
         {
             // Crear una aplicación Excel
@@ -270,6 +271,11 @@ namespace PF_CA81492KO_20517869Y
             worksheet.Cells[row + 2, 3] = "Hora:";
             worksheet.Cells[row + 2, 4] = DateTime.Now.ToShortTimeString();
 
+            //obtener el cliente (podrías obtenerlo de algún control en tu formulario)
+            string cliente = username;
+
+            //print client in worksheet
+            worksheet.Cells[row + 4, 4] = "Cliente: " + username.ToString();
             // Mensaje de agradecimiento
             worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
             worksheet.Cells[row + 5, 1] = "BikeShop.es";

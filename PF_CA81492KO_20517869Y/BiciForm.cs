@@ -245,7 +245,7 @@ namespace PF_CA81492KO_20517869Y
 
             //precio total
             worksheet.Cells[row, 3] = "Precio Total:";
-            worksheet.Cells[row, 4] = labelTotalBici.Text + "€";
+            worksheet.Cells[row, 4] = labelTotalBici.Text;
 
             //fecha y hora
             worksheet.Cells[row + 1, 3] = "Fecha:";
@@ -253,6 +253,8 @@ namespace PF_CA81492KO_20517869Y
             worksheet.Cells[row + 2, 3] = "Hora:";
             worksheet.Cells[row + 2, 4] = DateTime.Now.ToShortTimeString();
 
+            //print client in worksheet
+            worksheet.Cells[row + 4, 4] = "Cliente: " + username.ToString();
             //mensaje de agradecimiento
             worksheet.Cells[row + 4, 1] = "Gracias por su compra!";
             worksheet.Cells[row + 5, 1] = "BikeShop.es";
@@ -280,8 +282,8 @@ namespace PF_CA81492KO_20517869Y
             foreach (ListViewItem item in lvCarritoBicicleta.Items)
             {
                 string producto = item.SubItems[0].Text; //nombre
-                int precio = int.Parse(item.SubItems[1].Text.TrimEnd('€')); //precio
-                int cantidad = int.Parse(item.SubItems[2].Text); //cantidad
+                int precio = int.Parse(item.SubItems[1].ToString()); //precio
+                int cantidad = int.Parse(item.SubItems[2].ToString()); //cantidad
 
                 //guardar el detalle de la venta en la tabla DetalleVentas
                 GuardarDetalleVenta(ventaID, producto, precio, cantidad);
