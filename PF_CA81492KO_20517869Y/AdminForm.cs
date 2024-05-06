@@ -211,10 +211,23 @@ namespace PF_CA81492KO_20517869Y
         
         private void btnManagePart_Click(object sender, EventArgs e)
         {
-            GBModifyPart.Enabled = true;
-            lvtienda.Enabled = true;
-            CargarDatosTienda();
-            lvtienda.LabelEdit = true;
+            try {
+                if (CBManagePart.Text != "")
+                {
+                    GBModifyPart.Enabled = true;
+                    lvtienda.Enabled = true;
+                    CargarDatosTienda();
+                    lvtienda.LabelEdit = true;
+                }
+                else
+                {
+                    MessageBox.Show("Selecciona una parte a modificar");
+                } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message );
+            }
 
         }
 
