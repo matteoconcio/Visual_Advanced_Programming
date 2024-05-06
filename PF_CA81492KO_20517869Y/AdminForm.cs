@@ -80,7 +80,7 @@ namespace PF_CA81492KO_20517869Y
                     else
                     {
                         //username not found in the Admins table
-                        MessageBox.Show("Selected username not found in the database.");
+                        MessageBox.Show("Nombre de usuario no encontrado en la base de datos.");
                     }
 
                     sqlDataReader.Close();
@@ -97,7 +97,7 @@ namespace PF_CA81492KO_20517869Y
             else
             {
                 //no username selected in the ComboBox
-                MessageBox.Show("Please select a username.");
+                MessageBox.Show("Seleccione un nombre de usuario.");
             }
 
         }
@@ -134,14 +134,14 @@ namespace PF_CA81492KO_20517869Y
 
                         if (oldPassword != dbPassword)
                         {
-                            MessageBox.Show("Old password is incorrect.");
+                            MessageBox.Show("La contraseña antigua es incorrecta.");
                             return;
                         }
                     }
                     else
                     {
                         // Username not found in the Admins table
-                        MessageBox.Show("Selected username not found in the database.");
+                        MessageBox.Show("El nombre de usuario seleccionado no se encuentra en la base de datos.");
                         sqlDataReader.Close();
                         return;
                     }
@@ -156,14 +156,14 @@ namespace PF_CA81492KO_20517869Y
                 // Check if the new password and confirm password match
                 if (newPassword != confirmPassword)
                 {
-                    MessageBox.Show("New password and confirm password do not match.");
+                    MessageBox.Show("La nueva contraseña y la contraseña de confirmación no coinciden.");
                     return;
                 }
 
                 // Check if the new password meets the minimum length requirement
                 if (newPassword.Length < 5)
                 {
-                    MessageBox.Show("New password must be at least 5 characters long.");
+                    MessageBox.Show("La nueva contraseña debe tener al menos 5 caracteres.");
                     return;
                 }
 
@@ -178,7 +178,7 @@ namespace PF_CA81492KO_20517869Y
                     int rowsAffected = sqlCommand.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Password updated successfully.");
+                        MessageBox.Show("Contraseña correctamente actualizada");
                         TxtBoxNombreAdmin.Clear();
                         TxtBoxOldPassword.Clear();
                         TxtBoxNewPassword.Clear();
@@ -186,7 +186,7 @@ namespace PF_CA81492KO_20517869Y
                     }
                     else
                     {
-                        MessageBox.Show("Failed to update password.");
+                        MessageBox.Show("Contraseña no actualizada");
                     }
                 }
                 catch (Exception ex)
@@ -282,36 +282,6 @@ namespace PF_CA81492KO_20517869Y
                     MessageBox.Show("Error al recuperar datos: " + ex.Message);
                 }
             }
-        }
-
-        private void TxtBoxRepeatNewPass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtBoxOldPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblModifyPasswordAdmin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtBoxNewPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtBoxNombreAdmin_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void lvtienda_SelectedIndexChanged(object sender, EventArgs e)

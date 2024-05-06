@@ -203,7 +203,6 @@
             this.TxtBoxRepeatNewPass.Size = new System.Drawing.Size(146, 23);
             this.TxtBoxRepeatNewPass.TabIndex = 6;
             this.TxtBoxRepeatNewPass.UseSystemPasswordChar = true;
-            this.TxtBoxRepeatNewPass.TextChanged += new System.EventHandler(this.TxtBoxRepeatNewPass_TextChanged);
             // 
             // label1
             // 
@@ -214,7 +213,6 @@
             this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Contraseña";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // TxtBoxOldPassword
             // 
@@ -225,7 +223,6 @@
             this.TxtBoxOldPassword.Size = new System.Drawing.Size(146, 23);
             this.TxtBoxOldPassword.TabIndex = 4;
             this.TxtBoxOldPassword.UseSystemPasswordChar = true;
-            this.TxtBoxOldPassword.TextChanged += new System.EventHandler(this.TxtBoxOldPassword_TextChanged);
             // 
             // lblModifyPasswordAdmin
             // 
@@ -236,7 +233,6 @@
             this.lblModifyPasswordAdmin.Size = new System.Drawing.Size(126, 17);
             this.lblModifyPasswordAdmin.TabIndex = 3;
             this.lblModifyPasswordAdmin.Text = "Nueva Contraseña";
-            this.lblModifyPasswordAdmin.Click += new System.EventHandler(this.lblModifyPasswordAdmin_Click);
             // 
             // lblNameAdmin
             // 
@@ -257,7 +253,6 @@
             this.TxtBoxNewPassword.Size = new System.Drawing.Size(146, 23);
             this.TxtBoxNewPassword.TabIndex = 1;
             this.TxtBoxNewPassword.UseSystemPasswordChar = true;
-            this.TxtBoxNewPassword.TextChanged += new System.EventHandler(this.TxtBoxNewPassword_TextChanged);
             // 
             // TxtBoxNombreAdmin
             // 
@@ -267,7 +262,6 @@
             this.TxtBoxNombreAdmin.Name = "TxtBoxNombreAdmin";
             this.TxtBoxNombreAdmin.Size = new System.Drawing.Size(146, 23);
             this.TxtBoxNombreAdmin.TabIndex = 0;
-            this.TxtBoxNombreAdmin.TextChanged += new System.EventHandler(this.TxtBoxNombreAdmin_TextChanged);
             // 
             // btnExit
             // 
