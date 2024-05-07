@@ -191,12 +191,12 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Cantidad";
-            this.columnHeader3.Width = 150;
+            this.columnHeader3.Width = 100;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Precio";
-            this.columnHeader4.Width = 120;
+            this.columnHeader4.Width = 90;
             // 
             // lvtienda
             // 

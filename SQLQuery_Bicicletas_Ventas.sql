@@ -7,12 +7,3 @@ CREATE TABLE Ventas (
     Cliente VARCHAR(100)
 );
 
----- new table DetalleVentas
-CREATE TABLE DetallesVenta (
-    DetalleID INT PRIMARY KEY,
-    VentaID INT,
-    Producto VARCHAR(100),
-    Precio DECIMAL(10, 2),
-    Cantidad INT,
-    FOREIGN KEY (VentaID) REFERENCES Ventas(VentaID)
-);

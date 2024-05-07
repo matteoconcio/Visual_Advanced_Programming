@@ -245,7 +245,7 @@ namespace PF_CA81492KO_20517869Y
 
             //precio total
             worksheet.Cells[row, 3] = "Precio Total:";
-            worksheet.Cells[row, 4] = labelTotalBici.Text + "€";
+            worksheet.Cells[row, 4] = labelTotalBici.Text;
 
             //fecha y hora
             worksheet.Cells[row + 1, 3] = "Fecha:";
